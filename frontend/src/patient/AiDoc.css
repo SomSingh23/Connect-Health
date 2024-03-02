@@ -1,0 +1,60 @@
+.Complete{
+    height: 100vh;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: white;
+    font-weight: bold;
+    font-family: 'Copperplate gothic';
+}
+.btn{
+    background-color: rgb(27, 197, 146);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Copperplate gothic';
+    font-weight: bold;
+    color: rgb(249, 249, 249);
+    
+}
+.btn_selected{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Copperplate gothic';
+    font-weight: bold;
+    background-color: rgb(231, 63, 17);
+    color: rgb(247, 251, 250);
+}
+.btn_selected:hover{
+    background-color: rgb(231, 63, 17);
+    color: rgb(249, 249, 249);
+}
+.btn:hover{
+    background-color: white;
+    color: rgb(27, 197, 146);
+}
+.TxT{
+    border: 3px solid rgb(27, 197, 146);
+    padding: 10px;
+    margin: 10px;
+    font-family: 'Copperplate gothic';
+    font-weight: bold;
+}
+.SubmitBtn{
+    background-color: rgb(255, 213, 0);
+    margin: 10px;
+    color: rgb(3, 3, 3);
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Copperplate gothic';
+    font-weight: bold;
+}
+.SubmitBtn:hover{
+    background-color: white;
+    color: rgb(3, 3, 3);
+}
+.Answer{
+    font-size: 15px;
+    background-color: azure;
+    border: 3px solid black;
+}
