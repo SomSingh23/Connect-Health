@@ -1,8 +1,12 @@
+import Navbar from "../Navbar/NavBar";
 function Patient() {
   return (
-    <div className="App">
-      <h1>My WebRTC App</h1>
-    </div>
+    <>
+      <Navbar isPatient={true} />
+      <div className="App">
+        <h1>My WebRTC App</h1>
+      </div>
+    </>
   );
 }
 

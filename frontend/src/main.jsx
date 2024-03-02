@@ -1,34 +1,31 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
-import Patient from './patient/Patient'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+import "./index.css";
+import Patient from "./patient/Patient.jsx";
+import ChatBot from "./Chatbot/Chat.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement:<App/>,
-    children: [
-      {
-        path: "doctor",
-        element: <h1>Doctor</h1>,
-      },
-      {
-        path: "patient",
-        element: <Patient />,
-      }
-      ,
-      {
-        path: "chat_bot",
-        element: <h1>AI Assistant</h1>,
-      }
-      ,
-      {
-        path: "data_visualization",
-        element: <h1>Data Visualization</h1>,
-      }
-    ],
+    errorElement: <App />,
+  },
+  {
+    path: "doctor",
+    element: <h1>Doctor</h1>,
+  },
+  {
+    path: "patient",
+    element: <Patient />,
+  },
+  {
+    path: "chat_bot",
+    element: <ChatBot />,
+  },
+  {
+    path: "data_visualization",
+    element: <h1>Data Visualization</h1>,
   },
 ]);
 

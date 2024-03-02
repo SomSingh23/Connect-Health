@@ -1,6 +1,11 @@
-body{
-    color: black;
-    padding: 0px;
-    margin: 0px;
-
+body {
+  color: black;
+  padding: 0px;
+  margin: 0px;
+  font-family: "Forum", serif;
+}
+#root {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
