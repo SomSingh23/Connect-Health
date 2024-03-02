@@ -1,5 +1,8 @@
 import Navbar from "../Navbar/NavBar";
+import { useLoaderData } from "react-router-dom";
 function Patient() {
+  const role = useLoaderData();
+
   return (
     <>
       <Navbar isPatient={true} />

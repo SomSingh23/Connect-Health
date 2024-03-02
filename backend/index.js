@@ -2,6 +2,7 @@ let express = require("express");
 let cors = require("cors");
 let app = express();
 let chatRouter = require("./routes/chat");
+let autRouter = require("./routes/auth");
 require("dotenv").config();
 app.listen(process.env.PORT, () => {
   console.log("Server is running :)");
@@ -11,6 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // router
 app.use("/api/chat", chatRouter);
+app.use("/api/auth/", autRouter);
 // router
 app.get("/", (req, res) => {
   res.send("Boss Up and Running :)");
