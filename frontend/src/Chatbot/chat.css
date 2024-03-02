@@ -1,9 +1,3 @@
-.app {
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  width: 100vw;
-}
 p {
   font-size: 25px;
 }
@@ -13,14 +7,10 @@ p {
   flex-direction: column;
   justify-content: space-between;
   align-items: start;
-  padding-left: 50px;
   padding-bottom: 50px;
+  padding-left: 50px;
   padding-top: 30px;
   box-sizing: border-box;
-}
-.heading {
-  height: 8vh;
-  width: 75vw;
 }
 
 .prompt {

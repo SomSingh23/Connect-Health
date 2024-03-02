@@ -49,7 +49,7 @@ router.post("/generateTokenD", async (req, res) => {
     {
       role: "doctor",
       email: data.email,
-      exp: Math.floor(Date.now() / 1000) + 60, // 60 seconds testing phase
+      exp: Math.floor(Date.now() / 1000) + 600, // 600 seconds testing phase
     },
     process.env.JWT_SECRET
   );

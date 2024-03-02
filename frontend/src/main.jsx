@@ -9,6 +9,8 @@ import ChatBot from "./Chatbot/Chat.jsx";
 import roleChecking from "./roleChecking.js";
 import Doctor from "./Doctor/Doctor.jsx";
 import Logout from "./Logout/Logout.jsx";
+import Schedule from "./Doctor/Schedule.jsx";
+import Room from "./Doctor/Room.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const router = createBrowserRouter([
   {
@@ -40,6 +42,22 @@ const router = createBrowserRouter([
   {
     path: "logout",
     element: <Logout />,
+    loader: roleChecking,
+  },
+  {
+    path: "doctor/schedule",
+    element: <Schedule />,
+    loader: roleChecking,
+  },
+  {
+    path: "doctor/schedule/:id",
+    element: <Room />,
+    loader: roleChecking,
+  },
+  {
+    path: "consultation",
+    element: <h1>Consultation</h1>,
+    loader: roleChecking,
   },
   {
     path: "*",

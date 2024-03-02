@@ -1,21 +1,26 @@
 import Navbar from "../Navbar/NavBar";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, Link } from "react-router-dom";
 import { GoogleLogin } from "@react-oauth/google";
 import button_logo from "/button_logo/button_logo.png";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
-import "./patient.css";
+import { useState, useCallback } from "react";
+import "./doctor.css";
 import { useEffect } from "react";
 import axios from "axios";
-function Patient() {
+function Schedule() {
   const role = useLoaderData();
   const navigate = useNavigate();
   const [isPatient, setIsPatient] = useState(false);
   const [isDoctor, setIsDoctor] = useState(false);
   const [isLogout, setIsLogout] = useState(false);
+  const [rid, setRid] = useState();
+  const HandleClick = useCallback(() => {
+    navigate(`/doctor/schedule/${rid}`);
+  }, [navigate, rid]);
+
   useEffect(() => {
-    if (role === "doctor") {
-      navigate("/doctor");
+    if (role === "patient") {
+      navigate("/patient");
     }
   }, []);
 
@@ -24,7 +29,7 @@ function Patient() {
       <>
         <Navbar isPatient={!isPatient} isDoctor={!isDoctor} />
         <div className="login_with_google">
-          <p style={{ margin: "0px" }}>Sign in as Patient</p>
+          <p style={{ margin: "0px" }}>Sign in as Doctor</p>
 
           <img
             src={button_logo}
@@ -35,13 +40,14 @@ function Patient() {
           <GoogleLogin
             onSuccess={async (credentialResponse) => {
               let data = await axios.post(
-                "http://localhost:3001/api/auth/generateTokenP",
+                "http://localhost:3001/api/auth/generateTokenD",
                 {
                   token: credentialResponse.credential,
                 }
               );
               localStorage.setItem("token", data.data.token);
-              setIsPatient(true);
+
+              setIsDoctor(true);
               setIsLogout(true);
             }}
             onError={() => {
@@ -54,14 +60,22 @@ function Patient() {
   }
   return (
     <>
-      <Navbar isPatient={isPatient} isLogout={true} />
-      <div className="patient">
-        <h1>Request Consulation</h1>
-        <h1>View past records</h1>
-        <h1>AI Doctor</h1>
+      <Navbar isDoctor={isDoctor} isLogout={true} />
+      <div className="room_id_form">
+        <div className="Opt">
+          <input
+            className="buttonDsb"
+            type="text"
+            onChange={(e) => setRid(e.target.value)}
+            placeholder="Enter Room Id"
+          />
+          <button onClick={HandleClick} className="buttonDsb">
+            Get Consultation!
+          </button>
+        </div>
       </div>
     </>
   );
 }
 
-export default Patient;
+export default Schedule;
