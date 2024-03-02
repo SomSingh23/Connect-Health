@@ -2,6 +2,19 @@ import "./chat.css";
 import Navbar from "../Navbar/NavBar";
 import { useState } from "react";
 import axios from "axios";
+const waitingMessages = [
+  "Hang tight! I'm fetching the perfect response for you.",
+  "Just a moment while I gather some insights for you.",
+  "Sit tight! I'm working on finding the best answer for you.",
+  "Thanks for your patience! I'm on it.",
+  "I'm here, just processing your request. Won't be long!",
+  "Getting your answer ready. Thanks for waiting!",
+  "Almost there! I appreciate your patience.",
+  "Just a moment while I consult my virtual brain.",
+  "Hold on tight! I'm diving into the data for you.",
+  "I'm on the case! Thanks for giving me a moment.",
+];
+
 const ChatBot = () => {
   let [value, setValue] = useState("");
   let [data, setData] = useState({});
@@ -87,7 +100,15 @@ const ChatBot = () => {
           </div>
           <div className="prompt">
             {loading === true ? (
-              <input type="text" value="can't touch this" readonly></input>
+              <input
+                type="text"
+                value={
+                  waitingMessages[
+                    Math.floor(Math.random() * waitingMessages.length)
+                  ]
+                }
+                readonly
+              ></input>
             ) : (
               <input
                 type="text"
