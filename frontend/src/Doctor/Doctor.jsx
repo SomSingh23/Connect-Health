@@ -57,9 +57,13 @@ function Doctor() {
     <>
       <Navbar isDoctor={true} isLogout={true} />
       <div className="doctor">
-        <Link to={"/doctor/schedule"}>Schedule Consultation</Link>
+        <Link className="doctor_function" to={"/doctor/schedule"}>
+          Schedule Consultation
+        </Link>
         <br />
-        <Link to={"/consultation"}>Update Consultation</Link>
+        <Link className="doctor_function" to={"/consultation"}>
+          Update Consultation
+        </Link>
       </div>
     </>
   );
