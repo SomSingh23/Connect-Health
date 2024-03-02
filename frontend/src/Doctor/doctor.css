@@ -51,6 +51,7 @@
 
 /* Styles for links inside doctor div */
 .doctor .doctor_function {
+  font-size: 20px;
   display: block; /* Make links block-level for better spacing */
   padding: 10px 20px; /* Padding inside the link */
   margin-bottom: 10px; /* Spacing between links */

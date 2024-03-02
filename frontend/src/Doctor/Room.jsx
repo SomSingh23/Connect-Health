@@ -1,5 +1,5 @@
 import Navbar from "../Navbar/NavBar";
-import { useLoaderData, Link } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { ZegoUIKitPrebuilt } from "@zegocloud/zego-uikit-prebuilt";
 import { GoogleLogin } from "@react-oauth/google";
@@ -7,7 +7,6 @@ import button_logo from "/button_logo/button_logo.png";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "./doctor.css";
-import { useEffect } from "react";
 import axios from "axios";
 function Room() {
   const role = useLoaderData();

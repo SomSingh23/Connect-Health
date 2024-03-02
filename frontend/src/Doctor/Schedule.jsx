@@ -60,7 +60,7 @@ function Schedule() {
   }
   return (
     <>
-      <Navbar isDoctor={isDoctor} isLogout={true} />
+      <Navbar isDoctor={true} isLogout={true} />
       <div className="room_id_form">
         <div className="Opt">
           <input
