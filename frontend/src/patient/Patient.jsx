@@ -22,8 +22,16 @@ function Patient() {
   if (role === "noRole" && isPatient === false && isDoctor === false) {
     return (
       <>
-        <Navbar isPatient={isPatient} isDoctor={isDoctor} />
+        <Navbar isPatient={!isPatient} isDoctor={!isDoctor} />
         <div className="login_with_google">
+          <p style={{ margin: "0px" }}>Sign in as Patient</p>
+
+          <img
+            src={button_logo}
+            height={"150px"}
+            width={"150px"}
+            alt="Google Login"
+          />
           <GoogleLogin
             onSuccess={async (credentialResponse) => {
               let data = await axios.post(
@@ -33,7 +41,6 @@ function Patient() {
                 }
               );
               localStorage.setItem("token", data.data.token);
-              console.log(data.data.token);
               setIsPatient(true);
               setIsLogout(true);
             }}
@@ -41,14 +48,6 @@ function Patient() {
               console.log("Login Failed");
             }}
           />
-          <img
-            src={button_logo}
-            height={"150px"}
-            width={"150px"}
-            alt="Google Login"
-          />
-
-          <p>Login with Google</p>
         </div>
       </>
     );
@@ -59,6 +58,7 @@ function Patient() {
       <div className="App">
         <h1>My WebRTC App</h1>
         <h2>User Logged In</h2>
+        <h2>Patient Logged In Here</h2>
       </div>
     </>
   );

@@ -30,6 +30,7 @@ const router = createBrowserRouter([
   {
     path: "chat_bot",
     element: <ChatBot />,
+    loader: roleChecking,
   },
   {
     path: "data_visualization",

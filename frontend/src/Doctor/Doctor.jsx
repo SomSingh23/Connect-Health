@@ -1,9 +1,67 @@
 import Navbar from "../Navbar/NavBar";
-export default function Doctor() {
+import { useLoaderData } from "react-router-dom";
+import { GoogleLogin } from "@react-oauth/google";
+import button_logo from "/button_logo/button_logo.png";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import "./doctor.css";
+import { useEffect } from "react";
+import axios from "axios";
+function Doctor() {
+  const role = useLoaderData();
+  const navigate = useNavigate();
+  const [isPatient, setIsPatient] = useState(false);
+  const [isDoctor, setIsDoctor] = useState(false);
+  const [isLogout, setIsLogout] = useState(false);
+  useEffect(() => {
+    if (role === "patient") {
+      navigate("/patient");
+    }
+  }, []);
+
+  if (role === "noRole" && isPatient === false && isDoctor === false) {
+    return (
+      <>
+        <Navbar isPatient={!isPatient} isDoctor={!isDoctor} />
+        <div className="login_with_google">
+          <p style={{ margin: "0px" }}>Sign in as Doctor</p>
+
+          <img
+            src={button_logo}
+            height={"150px"}
+            width={"150px"}
+            alt="Google Login"
+          />
+          <GoogleLogin
+            onSuccess={async (credentialResponse) => {
+              let data = await axios.post(
+                "http://localhost:3001/api/auth/generateTokenD",
+                {
+                  token: credentialResponse.credential,
+                }
+              );
+              localStorage.setItem("token", data.data.token);
+
+              setIsDoctor(true);
+              setIsLogout(true);
+            }}
+            onError={() => {
+              console.log("Login Failed");
+            }}
+          />
+        </div>
+      </>
+    );
+  }
   return (
     <>
-      <Navbar />
-      <h1>This is a doctor Component</h1>
+      <Navbar isDoctor={isDoctor} isLogout={true} />
+      <div className="App">
+        <h2>Doctor Page </h2>
+        <h2>Doctor Logged In</h2>
+      </div>
     </>
   );
 }
+
+export default Doctor;
