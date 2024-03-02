@@ -1,6 +1,7 @@
 import "./chat.css";
 import Navbar from "../Navbar/NavBar";
 import { useState } from "react";
+import { useLoaderData } from "react-router-dom";
 import axios from "axios";
 const waitingMessages = [
   "Hang tight! I'm fetching the perfect response for you.",
@@ -47,7 +48,6 @@ const ChatBot = () => {
   return (
     <>
       {" "}
-      <Navbar />
       <div className="app">
         <div className="content">
           <div className="conservation">
@@ -135,5 +135,30 @@ const ChatBot = () => {
     </>
   );
 };
+let RealChatBot = () => {
+  let role = useLoaderData();
+  if (role === "patient") {
+    return (
+      <>
+        <Navbar isPatient={true} isDoctor={false} isLogout={true} />
+        <ChatBot />
+      </>
+    );
+  } else if (role === "doctor") {
+    return (
+      <>
+        <Navbar isPatient={false} isDoctor={true} isLogout={true} />
+        <ChatBot />
+      </>
+    );
+  } else {
+    return (
+      <>
+        <Navbar isPatient={true} isDoctor={true} isLogout={false} />
+        <ChatBot />
+      </>
+    );
+  }
+};
 
-export default ChatBot;
+export default RealChatBot;

@@ -7,7 +7,7 @@ require("dotenv").config();
 app.listen(process.env.PORT, () => {
   console.log("Server is running :)");
 });
-app.use(cors());
+app.use(cors(/* i will add the cors options here :) */));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // router
