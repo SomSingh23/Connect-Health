@@ -48,7 +48,7 @@ function Room() {
       sharedLinks: [
         {
           name: "Copy Link",
-          url: `http://localhost:5173/doctor/schedule/${id}`,
+          url: `http://localhost:5173/doctor/schedule/${roomID}`,
         },
       ],
       scenario: {
@@ -61,19 +61,14 @@ function Room() {
       },
     });
   };
-
-  useEffect(() => {
-    if (role === "patient") {
-      navigate("/patient");
-    }
-  }, []);
+  // removing patient role because patient it the only one who will be using the room
 
   if (role === "noRole" && isPatient === false && isDoctor === false) {
     return (
       <>
         <Navbar isPatient={!isPatient} isDoctor={!isDoctor} />
         <div className="login_with_google">
-          <p style={{ margin: "0px" }}>Sign in as Doctor</p>
+          <p style={{ margin: "0px" }}>Sign in as Patient</p>
 
           <img
             src={button_logo}
@@ -84,7 +79,7 @@ function Room() {
           <GoogleLogin
             onSuccess={async (credentialResponse) => {
               let data = await axios.post(
-                "https://alpine-backend-hackiniiitp.vercel.app/api/auth/generateTokenD",
+                "https://alpine-backend-hackiniiitp.vercel.app/api/auth/generateTokenP",
                 {
                   token: credentialResponse.credential,
                 }

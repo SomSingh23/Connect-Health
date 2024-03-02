@@ -11,8 +11,6 @@ export default function Navbar({ isPatient, isDoctor, isLogout }) {
 
         <Link to="/chat_bot">AI Assistant</Link>
 
-        <Link to="/data_visualization">Data Visualization</Link>
-
         {isLogout && (
           <Link style={{ color: "red" }} to="/logout">
             <b>Logout</b>

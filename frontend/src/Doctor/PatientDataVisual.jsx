@@ -7,7 +7,7 @@ import { useState } from "react";
 import "./doctor.css";
 import { useEffect } from "react";
 import axios from "axios";
-function Doctor() {
+function PatientDataVisual() {
   const role = useLoaderData();
   const navigate = useNavigate();
   const [isPatient, setIsPatient] = useState(false);
@@ -56,17 +56,11 @@ function Doctor() {
   return (
     <>
       <Navbar isDoctor={true} isLogout={true} />
-      <div className="doctor">
-        <Link className="doctor_function" to={"/doctor/schedule"}>
-          Schedule Consultation
-        </Link>
-        <br />
-        <Link className="doctor_function" to={"/doctor_data_visualization"}>
-          Patient Data Visualization
-        </Link>
+      <div>
+        <h1>Patient Data Visualization Here :______D</h1>
       </div>
     </>
   );
 }
 
-export default Doctor;
+export default PatientDataVisual;

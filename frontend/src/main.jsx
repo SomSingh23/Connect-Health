@@ -11,6 +11,7 @@ import Doctor from "./Doctor/Doctor.jsx";
 import Logout from "./Logout/Logout.jsx";
 import Schedule from "./Doctor/Schedule.jsx";
 import Room from "./Doctor/Room.jsx";
+import PatientDataVisual from "./Doctor/PatientDataVisual.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const router = createBrowserRouter([
   {
@@ -34,10 +35,6 @@ const router = createBrowserRouter([
     element: <ChatBot />,
     loader: roleChecking,
   },
-  {
-    path: "data_visualization",
-    element: <h1>Data Visualization</h1>,
-  },
 
   {
     path: "logout",
@@ -55,8 +52,8 @@ const router = createBrowserRouter([
     loader: roleChecking,
   },
   {
-    path: "consultation",
-    element: <h1>Consultation</h1>,
+    path: "doctor_data_visualization",
+    element: <PatientDataVisual />,
     loader: roleChecking,
   },
   {
