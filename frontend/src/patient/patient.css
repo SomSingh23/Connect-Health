@@ -3,3 +3,15 @@
   color: rgb(4, 48, 192);
   font-size: 25px;
 }
+.login_with_google {
+  margin: auto;
+  height: 350px;
+  margin-top: 100px;
+  width: 30%;
+  display: flex;
+  background-color: #f2ebeb;
+  border-radius: 10px;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}

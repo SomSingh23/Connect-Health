@@ -7,16 +7,20 @@ import "./index.css";
 import Patient from "./patient/Patient.jsx";
 import ChatBot from "./Chatbot/Chat.jsx";
 import roleChecking from "./roleChecking.js";
+import Doctor from "./Doctor/Doctor.jsx";
+import Logout from "./Logout/Logout.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <App />,
+    errorElement: <h1>Something Went Wrong</h1>,
+    loader: roleChecking,
   },
   {
     path: "doctor",
-    element: <h1>Doctor</h1>,
+    element: <Doctor />,
+    loader: roleChecking,
   },
   {
     path: "patient",
@@ -30,6 +34,15 @@ const router = createBrowserRouter([
   {
     path: "data_visualization",
     element: <h1>Data Visualization</h1>,
+  },
+
+  {
+    path: "logout",
+    element: <Logout />,
+  },
+  {
+    path: "*",
+    element: <h1>404 Not Found</h1>,
   },
 ]);
 
