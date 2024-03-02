@@ -54,7 +54,7 @@ function Patient() {
   }
   return (
     <>
-      <Navbar isPatient={isPatient} isLogout={true} />
+      <Navbar isPatient={true} isLogout={true} />
       <div className="patient">
         <h1>Request Consulation</h1>
         <h1>View past records</h1>

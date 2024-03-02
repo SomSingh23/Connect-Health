@@ -55,7 +55,7 @@ function Doctor() {
   }
   return (
     <>
-      <Navbar isDoctor={isDoctor} isLogout={true} />
+      <Navbar isDoctor={true} isLogout={true} />
       <div className="doctor">
         <Link to={"/doctor/schedule"}>Schedule Consultation</Link>
         <br />
