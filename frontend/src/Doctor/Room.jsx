@@ -55,6 +55,10 @@ function Room() {
         mode: ZegoUIKitPrebuilt.OneONoneCall,
       },
       showScreenSharingButton: false,
+      onLeaveRoom: () => {
+        navigate("/");
+        // shoutout to the Aditya Sharma for building this 🙏
+      },
     });
   };
 
