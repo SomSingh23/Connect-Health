@@ -6,6 +6,9 @@
   "author": "som singh lodhi (ssl)",
   "license": "YES",
   "private": false,
+  "engines": {
+    "node": ">=16.14.2"
+  },
   "dependencies": {
     "@google/generative-ai": "^0.2.1",
     "cors": "^2.8.5",
