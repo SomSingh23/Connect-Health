@@ -80,7 +80,7 @@ function Room() {
           <GoogleLogin
             onSuccess={async (credentialResponse) => {
               let data = await axios.post(
-                "http://localhost:3001/api/auth/generateTokenD",
+                "https://alpine-backend-hackiniiitp.vercel.app/api/auth/generateTokenD",
                 {
                   token: credentialResponse.credential,
                 }

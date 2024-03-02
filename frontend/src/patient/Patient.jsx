@@ -35,7 +35,7 @@ function Patient() {
           <GoogleLogin
             onSuccess={async (credentialResponse) => {
               let data = await axios.post(
-                "http://localhost:3001/api/auth/generateTokenP",
+                "https://alpine-backend-hackiniiitp.vercel.app/api/auth/generateTokenP",
                 {
                   token: credentialResponse.credential,
                 }
