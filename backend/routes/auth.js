@@ -33,7 +33,7 @@ router.post("/generateTokenP", async (req, res) => {
     {
       role: "patient",
       email: data.email,
-      exp: Math.floor(Date.now() / 1000) + 60, // 60 seconds testing phase
+      exp: Math.floor(Date.now() / 1000) + 10 * 60, // 600 seconds only for testing phase
     },
     process.env.JWT_SECRET
   );
