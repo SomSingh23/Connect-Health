@@ -25,9 +25,12 @@ const ChatBot = () => {
       setCount((p) => p + 1);
       setLoading((p) => !p);
       setData({ user: value, response: "..." });
-      let data = await axios.post("http://localhost:3001/api/chat/bot1", {
-        prompt: value,
-      });
+      let data = await axios.post(
+        "https://alpine-backend-hackiniiitp.vercel.app/api/chat/bot1",
+        {
+          prompt: value,
+        }
+      );
       setValue("");
       setData({ ...data.data });
       setLoading((p) => !p);

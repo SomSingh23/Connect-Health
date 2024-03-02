@@ -4,7 +4,7 @@ export default function App() {
   return (
     <>
       <Navbar />
-      <h1>Home Page</h1>
+      <div className="home_page"></div>
     </>
   );
 }

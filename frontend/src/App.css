@@ -1,0 +1,9 @@
+.home_page {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  background-image: url("/bg/bg.jpg");
+  background-size: cover;
+}
