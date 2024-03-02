@@ -1,7 +1,9 @@
-export default function Patient() {
+function Patient() {
   return (
-    <div>
-      <h1>Patient Component</h1>
+    <div className="App">
+      <h1>My WebRTC App</h1>
     </div>
   );
 }
+
+export default Patient;
