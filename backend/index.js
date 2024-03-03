@@ -1,9 +1,19 @@
 let express = require("express");
 let cors = require("cors");
 let app = express();
+let mongoose = require("mongoose");
 let chatRouter = require("./routes/chat");
 let autRouter = require("./routes/auth");
+
 require("dotenv").config();
+mongoose
+  .connect(process.env.MONGO)
+  .then((p) => {
+    console.log("Successfully connected to the database :D");
+  })
+  .catch((e) => {
+    console.log("Error connecting to the database :(");
+  });
 app.listen(process.env.PORT, () => {
   console.log("Server is running :)");
 });

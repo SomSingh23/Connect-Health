@@ -1,5 +1,5 @@
 import Navbar from "../Navbar/NavBar";
-import { useLoaderData, Link } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import { GoogleLogin } from "@react-oauth/google";
 import button_logo from "/button_logo/button_logo.png";
 import { useNavigate } from "react-router-dom";

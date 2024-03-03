@@ -12,7 +12,7 @@ export default function Logout() {
   if (role === "doctor") {
     return (
       <>
-        <Navbar isDoctor={true} isLogout={false} />
+        <Navbar isDoctor={true} isLogout={true} />
         <div>
           <h1>Logging you out. Please wait...</h1>
         </div>
@@ -21,7 +21,7 @@ export default function Logout() {
   } else if (role === "patient") {
     return (
       <>
-        <Navbar isPatient={true} isLogout={false} />
+        <Navbar isPatient={true} isLogout={true} />
         <div>
           <h1>Logging you out. Please wait...</h1>
         </div>
