@@ -2,6 +2,10 @@
 #  Health Care Access for Underserved Community
 
 ## Deployment Link : https://alpine-frontend-hackiniiitp.vercel.app/
+
+## preview
+ - ![image](https://github.com/SomSingh23/Alpine_Hackiniiitp/assets/91485305/f65332b0-f583-4b22-b7f4-ce7e68357980)
+
 ## Introduction
 Our project endeavors to tackle the critical issue of linking underserved patients with healthcare professionals. With a primary focus on enhancing accessibility, our aim is to create a seamless connection between underserved communities and doctors, addressing challenges such as geographical constraints and language barriers. By leveraging innovative technologies, particularly WebRTC, our web application facilitates virtual consultations, enabling patients to consult with doctors remotely.
 
