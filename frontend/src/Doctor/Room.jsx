@@ -47,7 +47,7 @@ function Room() {
       sharedLinks: [
         {
           name: "Copy Link",
-          url: `http://localhost:5173/doctor/schedule/${roomID}`,
+          url: `https://alpine-frontend-hackiniiitp.vercel.app/doctor/schedule/${roomID}`,
         },
       ],
       scenario: {

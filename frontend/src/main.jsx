@@ -12,6 +12,7 @@ import Logout from "./Logout/Logout.jsx";
 import Schedule from "./Doctor/Schedule.jsx";
 import Room from "./Doctor/Room.jsx";
 import PatientDataVisual from "./Doctor/PatientDataVisual.jsx";
+import AiDoc from "./patient/AiDoc.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const router = createBrowserRouter([
   {
@@ -54,6 +55,24 @@ const router = createBrowserRouter([
   {
     path: "doctor_data_visualization",
     element: <PatientDataVisual />,
+    loader: roleChecking,
+  },
+  {
+    path: "patient_request_consultation",
+    element: (
+      <div>
+        <h1>patient_request_consultation</h1>
+        <h1>
+          Email notifications will be sent to the doctor, and additional
+          functionalities will be incorporated...
+        </h1>
+      </div>
+    ),
+    loader: roleChecking,
+  },
+  {
+    path: "ai_doctor",
+    element: <AiDoc />,
     loader: roleChecking,
   },
   {

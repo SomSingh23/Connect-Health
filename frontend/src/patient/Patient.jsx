@@ -2,7 +2,7 @@ import Navbar from "../Navbar/NavBar";
 import { useLoaderData } from "react-router-dom";
 import { GoogleLogin } from "@react-oauth/google";
 import button_logo from "/button_logo/button_logo.png";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
 import "./patient.css";
 import { useEffect } from "react";
@@ -56,9 +56,13 @@ function Patient() {
     <>
       <Navbar isPatient={true} isLogout={true} />
       <div className="patient">
-        <h1>Request Consulation</h1>
-        <h1>View past records</h1>
-        <h1>AI Doctor</h1>
+        <Link className="patient_function" to={"/patient_request_consultation"}>
+          Request Consultation
+        </Link>
+        <br />
+        <Link className="patient_function" to={"/ai_doctor"}>
+          AI Doctor
+        </Link>
       </div>
     </>
   );

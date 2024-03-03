@@ -15,3 +15,39 @@
   align-items: center;
   flex-direction: column;
 }
+.patient {
+  margin-top: 50px;
+  transition: all 1s; /* Smooth tra nsition */
+  background-color: #ffffff; /* White background */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Padding around the content */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+/* Styles for links inside doctor div */
+.patient .patient_function {
+  font-size: 20px;
+  display: block; /* Make links block-level for better spacing */
+  padding: 10px 20px; /* Padding inside the link */
+  margin-bottom: 10px; /* Spacing between links */
+  text-decoration: none; /* Remove underline */
+  color: #333; /* Link color */
+  background-color: #f0f0f0; /* Light gray background */
+  border-radius: 6px; /* Rounded corners */
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.patient .patient_function:hover {
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background-color: #ded9d9; /* Darker background on hover */
+}
+
+/* Additional styles for individual links */
+.patient a:nth-child(odd) {
+  background-color: #f8f8f8; /* Alternate background color */
+}
+
+.patient a:last-child {
+  margin-bottom: 0; /* Remove bottom margin from the last link */
+}

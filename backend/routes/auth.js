@@ -41,7 +41,7 @@ router.post("/generateTokenP", async (req, res) => {
     {
       role: "patient",
       email: data.email,
-      exp: Math.floor(Date.now() / 1000) + 600, // 600 seconds only for testing phase
+      exp: Math.floor(Date.now() / 1000) + 12 * 60 * 60, // 12 hours  testing phase
     },
     process.env.JWT_SECRET
   );
@@ -63,7 +63,7 @@ router.post("/generateTokenD", async (req, res) => {
     {
       role: "doctor",
       email: data.email,
-      exp: Math.floor(Date.now() / 1000) + 600, // 600 seconds testing phase
+      exp: Math.floor(Date.now() / 1000) + 12 * 60 * 60, // 12 hours  testing phase
     },
     process.env.JWT_SECRET
   );
