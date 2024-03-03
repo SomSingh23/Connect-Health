@@ -64,7 +64,7 @@ The overarching goal is to ensure that individuals from underserved communities 
 
 
 ## Technologies Used
-![image](https://github.com/SomSingh23/Alpine_Hackiniiitp/assets/91485305/942d8d3e-13a4-451f-8759-bc704e7d3d79)
+ - ![image](https://github.com/SomSingh23/Alpine_Hackiniiitp/assets/91485305/942d8d3e-13a4-451f-8759-bc704e7d3d79)
 
 
 
