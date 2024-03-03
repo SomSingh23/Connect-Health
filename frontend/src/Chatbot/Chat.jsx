@@ -2,6 +2,7 @@ import "./chat.css";
 import Navbar from "../Navbar/NavBar";
 import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
+import { marked } from "marked";
 import axios from "axios";
 const waitingMessages = [
   "Hang tight! I'm fetching the perfect response for you.",
@@ -21,6 +22,7 @@ const ChatBot = () => {
   let [data, setData] = useState({});
   let [count, setCount] = useState(0);
   let [loading, setLoading] = useState(false);
+  let [htmlResponse, setHtmlResponse] = useState("");
   let handlePrompt = async () => {
     try {
       setCount((p) => p + 1);
@@ -34,6 +36,9 @@ const ChatBot = () => {
       );
       setValue("");
       setData({ ...data.data });
+      const _gather = marked(data.data.response);
+      setHtmlResponse(_gather);
+
       setLoading((p) => !p);
     } catch (err) {
       console.log(err);
@@ -93,7 +98,12 @@ const ChatBot = () => {
                       paddingLeft: "20px",
                     }}
                   >
-                    {"🧑‍⚕️ " + data.response}
+                    <p
+                      style={{
+                        color: "#0c0c0c",
+                      }}
+                      dangerouslySetInnerHTML={{ __html: htmlResponse }}
+                    />
                   </p>
                 )}
               </div>
