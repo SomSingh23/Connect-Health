@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@react-oauth/google": "^0.12.1",
+    "@vercel/analytics": "^1.2.2",
     "@zegocloud/zego-uikit-prebuilt": "^1.11.0",
     "axios": "^1.6.7",
     "marked": "^12.0.0",
