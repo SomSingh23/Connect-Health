@@ -56,12 +56,12 @@ function Patient() {
     <>
       <Navbar isPatient={true} isLogout={true} />
       <div className="patient">
-        <Link className="patient_function" to={"/patient_request_consultation"}>
-          Request Consultation
-        </Link>
-        <br />
         <Link className="patient_function" to={"/ai_doctor"}>
           AI Doctor
+        </Link>
+        <br />
+        <Link className="patient_function" to={"/patient_request_consultation"}>
+          Request Consultation
         </Link>
       </div>
     </>

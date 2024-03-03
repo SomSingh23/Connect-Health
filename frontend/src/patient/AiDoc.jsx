@@ -56,7 +56,7 @@ const ChatBot = () => {
   return (
     <>
       <div className="Complete">
-        <h1>Enter Symh1toms</h1>
+        <h1>Enter Symptoms</h1>
         <button
           className={
             selectedSymptoms.includes("Sore Throat") ? "btn_selected" : "btn"
