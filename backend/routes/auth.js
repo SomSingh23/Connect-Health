@@ -1,7 +1,7 @@
 const express = require("express");
 let jwt = require("jsonwebtoken");
-let User = require("../database/user");
-let { v4: uuid } = require("uuid");
+// let User = require("../database/user");
+// let { v4: uuid } = require("uuid");
 const router = express.Router();
 require("dotenv").config();
 let wait5Second = () => {
@@ -31,12 +31,12 @@ router.post("/verify", async (req, res) => {
 router.post("/generateTokenP", async (req, res) => {
   let data = jwt.decode(req.body.token);
   // db calls for first time user and few async tasks
-  let newUser = new User({
-    role: "patient",
-    email: data.email,
-    uuid: uuid(),
-  });
-  await newUser.save();
+  // let newUser = new User({
+  //   role: "patient",
+  //   email: data.email,
+  //   uuid: uuid(),
+  // });
+  // await newUser.save();
   let token = jwt.sign(
     {
       role: "patient",
@@ -53,13 +53,12 @@ router.post("/generateTokenP", async (req, res) => {
 router.post("/generateTokenD", async (req, res) => {
   let data = jwt.decode(req.body.token);
   // db calls for first time user and few async tasks
-  let newUser = new User({
-    role: "doctor",
-    email: data.email,
-    uuid: uuid(),
-  });
-  let _newUser = await newUser.save();
-  console.log(_newUser);
+  // let newUser = new User({
+  //   role: "doctor",
+  //   email: data.email,
+  //   uuid: uuid(),
+  // });
+  // await newUser.save();
   let token = jwt.sign(
     {
       role: "doctor",

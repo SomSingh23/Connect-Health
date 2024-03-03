@@ -4,7 +4,7 @@ let app = express();
 let mongoose = require("mongoose");
 let chatRouter = require("./routes/chat");
 let autRouter = require("./routes/auth");
-
+let dataRouter = require("./routes/data");
 require("dotenv").config();
 mongoose
   .connect(process.env.MONGO)
@@ -23,6 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 // router
 app.use("/api/chat", chatRouter);
 app.use("/api/auth/", autRouter);
+app.use("/api/data", dataRouter);
 // router
 app.get("/", (req, res) => {
   res.send("Boss Up and Running :)");

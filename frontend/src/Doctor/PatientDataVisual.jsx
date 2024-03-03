@@ -58,6 +58,7 @@ function PatientDataVisual() {
       <Navbar isDoctor={true} isLogout={true} />
       <div>
         <h1>Patient Data Visualization Here :______D</h1>
+        <h1>Working on this...</h1>
       </div>
     </>
   );
