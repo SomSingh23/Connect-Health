@@ -19,7 +19,7 @@ const ChatBot = () => {
         "I have these symptoms: " +
         selectedSymptoms.join(", ") +
         customValue +
-        ". Give me a possible Diagnosis and Treatment Plan";
+        ". Give me a possible Diagnosis and Treatment Plan for now later i will consult a doctor.";
       setValue(promptValue);
       console.log(promptValue);
       setCount((p) => p + 1);
@@ -55,8 +55,8 @@ const ChatBot = () => {
   };
   return (
     <>
+      <h1>Enter Symptoms</h1>
       <div className="Complete">
-        <h1>Enter Symptoms</h1>
         <button
           className={
             selectedSymptoms.includes("Sore Throat") ? "btn_selected" : "btn"
@@ -89,7 +89,7 @@ const ChatBot = () => {
         >
           Cough
         </button>
-        <br />
+
         <button
           className={
             selectedSymptoms.includes("HeadAche") ? "btn_selected" : "btn"
@@ -116,8 +116,9 @@ const ChatBot = () => {
         >
           Shortness of Breath
         </button>
+      </div>
 
-        <br />
+      <div className="extraSymp">
         <input
           className="TxT"
           type="text"
@@ -128,8 +129,9 @@ const ChatBot = () => {
         <button className="SubmitBtn" onClick={handlePrompt}>
           Submit
         </button>
-        <br />
-        <br />
+      </div>
+
+      <div className="handleAnswer">
         {loading === true ? (
           <div className="loading">
             <p>Loading </p>
@@ -139,10 +141,7 @@ const ChatBot = () => {
           <p
             className="Answer"
             style={{
-              color: "#0c0c0c",
-              margin: 0,
-              fontWeight: "bold",
-              paddingLeft: "20px",
+              color: "black",
             }}
             dangerouslySetInnerHTML={{ __html: formattedResponse }}
           />

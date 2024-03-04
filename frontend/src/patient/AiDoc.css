@@ -1,26 +1,37 @@
 .Complete {
-  height: 100vh;
-  margin-left: 10%;
-  margin-right: 10%;
   background-color: white;
-  font-weight: bold;
-  font-family: "Copperplate gothic";
+  display: flex;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
+h1 {
+  text-align: center;
+  padding-top: 17px;
+  padding-bottom: 11px;
+  color: #555;
+}
+
 .btn {
+  height: 60px;
+  width: 120px;
+  border: none;
   background-color: rgb(27, 197, 146);
-  margin: 10px;
-  padding: 10px;
+  text-align: center;
   border-radius: 5px;
-  font-family: "Copperplate gothic";
-  font-weight: bold;
+  border: 2px solid white;
   color: rgb(249, 249, 249);
 }
 .btn_selected {
-  margin: 10px;
-  padding: 10px;
+  height: 60px;
+  width: 120px;
+
   border-radius: 5px;
-  font-family: "Copperplate gothic";
-  font-weight: bold;
+  text-align: center;
   background-color: rgb(231, 63, 17);
   color: rgb(247, 251, 250);
 }
@@ -29,33 +40,40 @@
   color: rgb(249, 249, 249);
 }
 .btn:hover {
+  font-weight: bold;
   background-color: white;
+  border: 2px solid black;
   color: rgb(27, 197, 146);
 }
 .TxT {
-  border: 3px solid rgb(27, 197, 146);
-  padding: 10px;
-  margin: 10px;
-  font-family: "Copperplate gothic";
-  font-weight: bold;
+  width: 19%;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 2px solid rgb(27, 197, 146);
+  padding: 14px;
 }
 .SubmitBtn {
+  width: 21%;
   background-color: rgb(255, 213, 0);
-  margin: 10px;
-  color: rgb(3, 3, 3);
-  padding: 10px;
   border-radius: 5px;
-  font-family: "Copperplate gothic";
-  font-weight: bold;
+  color: rgb(3, 3, 3);
+  padding: 14px;
 }
 .SubmitBtn:hover {
   background-color: white;
   color: rgb(3, 3, 3);
 }
 .Answer {
-  font-size: 15px;
+  width: 85%;
+  font-size: 18px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   background-color: rgba(255, 255, 255, 0.941);
-  border: 2px solid black;
+  padding-left: 18px;
+  padding-right: 18px;
+  box-sizing: border-box;
+  border: 3px solid rgb(130, 130, 130);
+  border-radius: 5px;
 }
 .loader {
   margin-top: 10px;
@@ -82,4 +100,23 @@
   justify-content: start;
   align-items: center;
   padding-left: 20px;
+}
+.handleAnswer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.extraSymp {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 25px;
+  box-sizing: border-box;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  margin-bottom: 16px;
 }
