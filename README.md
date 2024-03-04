@@ -22,8 +22,9 @@ The overarching goal is to ensure that individuals from underserved communities 
  - ![image](https://github.com/SomSingh23/Alpine_Hackiniiitp/assets/91485305/1447562d-661d-4496-aef6-864feedb4015)
 
 - ### AI Assistant
-  - ![image](https://github.com/SomSingh23/Alpine_Hackiniiitp/assets/91485305/9278d6d3-de7e-44e4-bc42-f40bd267cb28)
-  - ![image](https://github.com/SomSingh23/Alpine_Hackiniiitp/assets/91485305/46e8b902-eedd-42e8-bea0-918d2be3c5a1)
+  - ![image](https://github.com/SomSingh23/Alpine_Hackiniiitp/assets/91485305/15b27955-c997-4664-b2f5-4b69623d0c35)
+  - ![image](https://github.com/SomSingh23/Alpine_Hackiniiitp/assets/91485305/0198cfdf-6002-43ae-bf51-27afcc035802)
+
 
 - ### Patient Page
   - ![image](https://github.com/SomSingh23/Alpine_Hackiniiitp/assets/91485305/4550d091-c964-4441-b945-aebb48dc1758)
