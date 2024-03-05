@@ -21,7 +21,7 @@ app.use(cors(/* i will add the cors options here :) */));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // router
-app.use("/api/chat", chatRouter);
+app.use("/api/chat/", chatRouter);
 app.use("/api/auth/", autRouter);
 // app.use("/api/data", dataRouter);
 // router
