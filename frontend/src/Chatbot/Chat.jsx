@@ -101,6 +101,15 @@ const ChatBot = () => {
                     <p
                       style={{
                         color: "#0c0c0c",
+
+                        fontFamily: [
+                          "Trebuchet MS",
+                          "Lucida Sans Unicode",
+                          "Lucida Grande",
+                          "Lucida Sans",
+                          " Arial",
+                          "sans-serif",
+                        ],
                       }}
                       dangerouslySetInnerHTML={{ __html: htmlResponse }}
                     />
