@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Image from "../../public/bg/lost_astro.jpg";
+import Image from "/bg/lost_astro.jpg";
 import "./PageNotFound.css";
 const NotFoundPage = () => {
   return (
