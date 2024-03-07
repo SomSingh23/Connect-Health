@@ -13,6 +13,7 @@ import Schedule from "./Doctor/Schedule.jsx";
 import Room from "./Doctor/Room.jsx";
 import PatientDataVisual from "./Doctor/PatientDataVisual.jsx";
 import AiDoc from "./patient/AiDoc.jsx";
+import PageNotFound from "./PageNotFound/PageNotFound.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const router = createBrowserRouter([
   {
@@ -77,7 +78,7 @@ const router = createBrowserRouter([
   },
   {
     path: "*",
-    element: <h1>404 Not Found 🙇</h1>,
+    element: <PageNotFound />,
   },
 ]);
 
