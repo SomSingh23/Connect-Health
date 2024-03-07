@@ -45,7 +45,7 @@ router.post("/generateTokenP", async (req, res) => {
     },
     process.env.JWT_SECRET
   );
-  console.log("Patient Token" + token);
+  // console.log("Patient Token" + token);
 
   res.status(200).json({ token });
 });
@@ -67,7 +67,7 @@ router.post("/generateTokenD", async (req, res) => {
     },
     process.env.JWT_SECRET
   );
-  console.log("Doctor Token" + token);
+  // console.log("Doctor Token" + token);
 
   res.status(200).json({ token });
 });

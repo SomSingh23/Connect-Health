@@ -7,6 +7,7 @@ import { useState } from "react";
 import "./doctor.css";
 import { useEffect } from "react";
 import axios from "axios";
+import BACKEND_URL from "../services/api";
 function Doctor() {
   const role = useLoaderData();
   const navigate = useNavigate();
@@ -35,7 +36,7 @@ function Doctor() {
           <GoogleLogin
             onSuccess={async (credentialResponse) => {
               let data = await axios.post(
-                "https://alpine-backend-hackiniiitp.vercel.app/api/auth/generateTokenD",
+                `${BACKEND_URL}/api/auth/generateTokenD`,
                 {
                   token: credentialResponse.credential,
                 }

@@ -4,7 +4,7 @@ import { useState } from "react";
 import axios from "axios";
 import { marked } from "marked";
 import { useLoaderData } from "react-router-dom";
-
+import BACKEND_URL from "../services/api";
 const ChatBot = () => {
   let [value, setValue] = useState("");
   let [data, setData] = useState({});
@@ -21,16 +21,12 @@ const ChatBot = () => {
         customValue +
         ". Give me a possible Diagnosis and Treatment Plan for now later i will consult a doctor.";
       setValue(promptValue);
-      console.log(promptValue);
       setCount((p) => p + 1);
       setLoading((p) => !p);
       setData({ user: promptValue, response: "..." });
-      const response = await axios.post(
-        "https://alpine-backend-hackiniiitp.vercel.app/api/chat/bot1",
-        {
-          prompt: promptValue,
-        }
-      );
+      const response = await axios.post(`${BACKEND_URL}/api/chat/bot1`, {
+        prompt: promptValue,
+      });
       setValue("");
       setData(response.data);
       const htmlResponse = marked(response.data.response);

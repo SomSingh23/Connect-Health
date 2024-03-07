@@ -5,6 +5,7 @@ import button_logo from "/button_logo/button_logo.png";
 import { useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
 import "./patient.css";
+import BACKEND_URL from "../services/api";
 import { useEffect } from "react";
 import axios from "axios";
 function Patient() {
@@ -35,7 +36,7 @@ function Patient() {
           <GoogleLogin
             onSuccess={async (credentialResponse) => {
               let data = await axios.post(
-                "https://alpine-backend-hackiniiitp.vercel.app/api/auth/generateTokenP",
+                `${BACKEND_URL}/api/auth/generateTokenP`,
                 {
                   token: credentialResponse.credential,
                 }

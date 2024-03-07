@@ -7,6 +7,7 @@ import button_logo from "/button_logo/button_logo.png";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "./doctor.css";
+import BACKEND_URL from "../services/api";
 import axios from "axios";
 function Room() {
   const role = useLoaderData();
@@ -78,7 +79,7 @@ function Room() {
           <GoogleLogin
             onSuccess={async (credentialResponse) => {
               let data = await axios.post(
-                "https://alpine-backend-hackiniiitp.vercel.app/api/auth/generateTokenP",
+                `${BACKEND_URL}/api/auth/generateTokenP`,
                 {
                   token: credentialResponse.credential,
                 }

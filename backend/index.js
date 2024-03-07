@@ -1,29 +1,38 @@
 let express = require("express");
 let cors = require("cors");
 let app = express();
-// let mongoose = require("mongoose");
+let mongoose = require("mongoose");
+let corsConfig = require("./cors/corsConfig");
 let chatRouter = require("./routes/chat");
 let autRouter = require("./routes/auth");
-let dataRouter = require("./routes/data");
+
 require("dotenv").config();
-// mongoose
-//   .connect(process.env.MONGO)
-//   .then((p) => {
-//     console.log("Successfully connected to the database :D");
-//   })
-//   .catch((e) => {
-//     console.log("Error connecting to the database :(");
-//   });
+mongoose
+  .connect(process.env.MONGO)
+  .then((p) => {
+    console.log("Successfully connected to the database :D");
+  })
+  .catch((e) => {
+    console.log(e);
+    console.log("Error connecting to the database :(");
+  });
 app.listen(process.env.PORT, () => {
   console.log("Server is running :)");
 });
-app.use(cors(/* i will add the cors options here :) */));
+/*
+app.use((req, res, next) => {
+  console.log(req.url);
+  next();
+});
+ // only for development
+*/
+
+app.use(cors(corsConfig));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // router
 app.use("/api/chat/", chatRouter);
 app.use("/api/auth/", autRouter);
-// app.use("/api/data", dataRouter);
 // router
 app.get("/", (req, res) => {
   res.send("Boss Up and Running :)");

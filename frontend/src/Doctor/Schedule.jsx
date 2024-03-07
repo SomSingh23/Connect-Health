@@ -5,6 +5,7 @@ import button_logo from "/button_logo/button_logo.png";
 import { useNavigate } from "react-router-dom";
 import { useState, useCallback } from "react";
 import "./doctor.css";
+import BACKEND_URL from "../services/api";
 import { useEffect } from "react";
 import axios from "axios";
 function Schedule() {
@@ -40,7 +41,7 @@ function Schedule() {
           <GoogleLogin
             onSuccess={async (credentialResponse) => {
               let data = await axios.post(
-                "https://alpine-backend-hackiniiitp.vercel.app/api/auth/generateTokenD",
+                `${BACKEND_URL}/api/auth/generateTokenD`,
                 {
                   token: credentialResponse.credential,
                 }

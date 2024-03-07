@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { marked } from "marked";
 import axios from "axios";
+import BACKEND_URL from "../services/api";
 const waitingMessages = [
   "Hang tight! I'm fetching the perfect response for you.",
   "Just a moment while I gather some insights for you.",
@@ -28,12 +29,9 @@ const ChatBot = () => {
       setCount((p) => p + 1);
       setLoading((p) => !p);
       setData({ user: value, response: "..." });
-      let data = await axios.post(
-        "https://alpine-backend-hackiniiitp.vercel.app/api/chat/bot1",
-        {
-          prompt: value,
-        }
-      );
+      let data = await axios.post(`${BACKEND_URL}/api/chat/bot1`, {
+        prompt: value,
+      });
       setValue("");
       setData({ ...data.data });
       const _gather = marked(data.data.response);
@@ -129,7 +127,7 @@ const ChatBot = () => {
                     Math.floor(Math.random() * waitingMessages.length)
                   ]
                 }
-                readonly
+                readOnly
               ></input>
             ) : (
               <input
