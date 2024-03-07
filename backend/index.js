@@ -19,14 +19,13 @@ mongoose
 app.listen(process.env.PORT, () => {
   console.log("Server is running :)");
 });
-/*
-app.use((req, res, next) => {
-  console.log(req.url);
-  next();
-});
- // only for development
-*/
 
+// app.use((req, res, next) => {
+//   console.log(req.url);
+//   next();
+// });
+
+// only for development ☝️
 app.use(cors(corsConfig));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

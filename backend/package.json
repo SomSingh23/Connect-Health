@@ -4,10 +4,13 @@
   "description": "will change this later on",
   "main": "index.js",
   "author": "som singh lodhi (ssl)",
-  "license": "YES",
+  "license": "MIT",
   "private": false,
   "engines": {
     "node": ">=16.14.2"
+  },
+  "scripts": {
+    "test": "npx jest isProducationReady.test.js"
   },
   "dependencies": {
     "@google/generative-ai": "^0.2.1",
@@ -17,5 +20,8 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.2.0",
     "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }

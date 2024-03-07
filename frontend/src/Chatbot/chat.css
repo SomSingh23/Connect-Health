@@ -32,6 +32,7 @@ p {
   border-radius: 10px;
   padding-right: 10px;
   box-sizing: border-box;
+  padding-top: 10px;
   border: 2px solid #006600;
   /* border-right: 2px solid rgb(0, 0, 0); */
 }

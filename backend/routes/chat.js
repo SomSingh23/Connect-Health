@@ -8,11 +8,13 @@ router.post("/bot1", async (req, res) => {
   try {
     let prompt = req.body.prompt;
     let data = await run(prompt);
+    res.setHeader("Access-Control-Allow-Origin", "*");
     return res.status(200).json({
       user: prompt,
       response: data,
     });
   } catch (err) {
+    res.setHeader("Access-Control-Allow-Origin", "*");
     return res.status(200).json({
       user: prompt,
       response: "something went wrong 😢",

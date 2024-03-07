@@ -73,12 +73,12 @@ const ChatBot = () => {
               <div>
                 <p
                   style={{
-                    color: "rgb(69, 69, 22)",
                     marginTop: "10px",
-
+                    fontSize: "27px",
                     marginBottom: "10px",
-
+                    fontFamily: "Helvetica",
                     paddingLeft: "20px",
+                    color: "rgb(69, 69, 0)",
                   }}
                 >
                   {"👤 " + data.user}
