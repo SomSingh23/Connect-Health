@@ -5,10 +5,9 @@ export default function Navbar({ isPatient, isDoctor, isLogout }) {
     <>
       <div className="navbar">
         <Link to="/">Home</Link>
-        {isDoctor && <Link to="/doctor">Doctor</Link>}
-
         {isPatient && <Link to="/patient">Patient</Link>}
-
+        {isDoctor && <Link to="/doctor">Doctor</Link>}
+        {isPatient && <Link to="/ai_doctor">AI Doctor</Link>}
         <Link to="/chat_bot">AI Assistant</Link>
 
         {isLogout && (
