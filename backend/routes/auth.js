@@ -48,7 +48,6 @@ router.post("/generateTokenP", async (req, res) => {
       email: data.email,
       uuid: uuid(),
       picture: data.picture,
-      ip: req.ip,
     });
     await newUser.save();
     return res.status(200).json({ token });
@@ -81,7 +80,6 @@ router.post("/generateTokenD", async (req, res) => {
       email: data.email,
       uuid: uuid(),
       picture: data.picture,
-      ip: req.ip,
     });
     await newUser.save();
     return res.status(200).json({ token });

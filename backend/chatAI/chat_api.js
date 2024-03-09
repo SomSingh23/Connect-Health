@@ -42,7 +42,8 @@ const ifFail = async (_input) => {
     return text;
   } catch (err) {
     console.log("Run function Backup also Failed");
-    return err.message;
+    console.log(err.message);
+    return "Something Went Wrong :(";
   }
 };
 async function run(_input) {

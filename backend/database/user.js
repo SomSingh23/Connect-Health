@@ -3,7 +3,6 @@ let Schema = new mongoose.Schema({
   role: String,
   email: String,
   uuid: String,
-  ip: String,
   picture: String,
 });
 let User = mongoose.model("User", Schema);
