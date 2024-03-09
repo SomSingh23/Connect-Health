@@ -6,16 +6,24 @@ import { GoogleLogin } from "@react-oauth/google";
 import button_logo from "/button_logo/button_logo.png";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import FallBackUi from "../Fallback/FallbackUi";
 import "./doctor.css";
 import BACKEND_URL from "../services/api";
 import axios from "axios";
 function Room() {
   const role = useLoaderData();
   const navigate = useNavigate();
-  const [isPatient, setIsPatient] = useState(false);
-  const [isDoctor, setIsDoctor] = useState(false);
+  const [isPatient, setIsPatient] = useState(role === "patient" ? true : false);
+  const [isDoctor, setIsDoctor] = useState(role === "doctor" ? true : false);
   const [isLogout, setIsLogout] = useState(false);
-
+  const [isLoading, setIsLoading] = useState(false);
+  const [isEmailDuplicate, setIsEmailDuplicate] = useState(false);
+  if (isLoading === true && isEmailDuplicate === false) {
+    return <FallBackUi />;
+  }
+  if (isLoading === false && isEmailDuplicate === true) {
+    return <h1>Doctor-Doctor Meeting is not allowed!</h1>;
+  }
   function randomID(len) {
     let result = "";
     if (result) return result;
@@ -61,14 +69,16 @@ function Room() {
       },
     });
   };
-  // removing patient role because patient it the only one who will be using the room
+  // removing patient role because patient they are the only one who will be joining the room
 
   if (role === "noRole" && isPatient === false && isDoctor === false) {
     return (
       <>
         <Navbar isPatient={!isPatient} isDoctor={!isDoctor} />
         <div className="login_with_google">
-          <p style={{ margin: "0px" }}>Sign in as Patient</p>
+          <p style={{ margin: "0px", fontFamily: "Arial" }}>
+            Sign in as Patient
+          </p>
 
           <img
             src={button_logo}
@@ -78,16 +88,22 @@ function Room() {
           />
           <GoogleLogin
             onSuccess={async (credentialResponse) => {
+              setIsLoading(true);
               let data = await axios.post(
                 `${BACKEND_URL}/api/auth/generateTokenP`,
                 {
                   token: credentialResponse.credential,
                 }
               );
+              if (data.data.token === "tokenNotGranted") {
+                setIsEmailDuplicate(true);
+                setIsLoading(false);
+                return;
+              }
               localStorage.setItem("token", data.data.token);
-
-              setIsDoctor(true);
+              setIsPatient(true);
               setIsLogout(true);
+              setIsLoading(false);
             }}
             onError={() => {
               console.log("Login Failed");
@@ -99,7 +115,7 @@ function Room() {
   }
   return (
     <>
-      <Navbar isDoctor={isDoctor} isLogout={true} />
+      <Navbar isPatient={isPatient} isDoctor={isDoctor} isLogout={true} />
       <div>
         <div ref={myMeeting} />
       </div>

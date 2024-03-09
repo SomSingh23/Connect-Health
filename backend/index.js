@@ -25,7 +25,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // app.use((req, res, next) => {
-//   console.log(req.url);
+//   console.log(`${req.url} ${req.ip}`);
 //   next();
 // });
 

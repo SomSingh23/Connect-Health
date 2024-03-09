@@ -1,0 +1,6 @@
+.main-loader-fallback {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 84vh;
+}

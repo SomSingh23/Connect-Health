@@ -1,7 +1,7 @@
 const express = require("express");
 let jwt = require("jsonwebtoken");
-// let User = require("../database/user");
-// let { v4: uuid } = require("uuid");
+let User = require("../database/user");
+let { v4: uuid } = require("uuid");
 const router = express.Router();
 require("dotenv").config();
 let wait5Second = () => {
@@ -31,12 +31,6 @@ router.post("/verify", async (req, res) => {
 router.post("/generateTokenP", async (req, res) => {
   let data = jwt.decode(req.body.token);
   // db calls for first time user and few async tasks
-  // let newUser = new User({
-  //   role: "patient",
-  //   email: data.email,
-  //   uuid: uuid(),
-  // });
-  // await newUser.save();
   let token = jwt.sign(
     {
       role: "patient",
@@ -45,20 +39,32 @@ router.post("/generateTokenP", async (req, res) => {
     },
     process.env.JWT_SECRET
   );
-  // console.log("Patient Token" + token);
 
-  res.status(200).json({ token });
+  let checkPatient = await User.findOne({ email: data.email });
+  if (checkPatient === null) {
+    console.log("new Patient user");
+    let newUser = new User({
+      role: "patient",
+      email: data.email,
+      uuid: uuid(),
+      picture: data.picture,
+      ip: req.ip,
+    });
+    await newUser.save();
+    return res.status(200).json({ token });
+  }
+  if (checkPatient.role === "patient") {
+    console.log("old user Patient");
+    return res.status(200).json({ token });
+  }
+  return res.status(200).json({
+    token: "tokenNotGranted",
+    picture: data.picture,
+  });
 });
 
 router.post("/generateTokenD", async (req, res) => {
   let data = jwt.decode(req.body.token);
-  // db calls for first time user and few async tasks
-  // let newUser = new User({
-  //   role: "doctor",
-  //   email: data.email,
-  //   uuid: uuid(),
-  // });
-  // await newUser.save();
   let token = jwt.sign(
     {
       role: "doctor",
@@ -67,8 +73,26 @@ router.post("/generateTokenD", async (req, res) => {
     },
     process.env.JWT_SECRET
   );
-  // console.log("Doctor Token" + token);
-
-  res.status(200).json({ token });
+  let checkDoctor = await User.findOne({ email: data.email });
+  if (checkDoctor === null) {
+    console.log("new Doctor user");
+    let newUser = new User({
+      role: "doctor",
+      email: data.email,
+      uuid: uuid(),
+      picture: data.picture,
+      ip: req.ip,
+    });
+    await newUser.save();
+    return res.status(200).json({ token });
+  }
+  if (checkDoctor.role === "doctor") {
+    console.log("old user Doctor");
+    return res.status(200).json({ token });
+  }
+  return res.status(200).json({
+    token: "tokenNotGranted",
+    picture: data.picture,
+  });
 });
 module.exports = router;
