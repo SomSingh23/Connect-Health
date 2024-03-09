@@ -43,11 +43,14 @@ router.post("/generateTokenP", async (req, res) => {
   let checkPatient = await User.findOne({ email: data.email });
   if (checkPatient === null) {
     console.log("new Patient user");
+    const clientIP =
+      req.headers["x-forwarded-for"] || req.connection.remoteAddress;
     let newUser = new User({
       role: "patient",
       email: data.email,
       uuid: uuid(),
       picture: data.picture,
+      ip: clientIP,
     });
     await newUser.save();
     return res.status(200).json({ token });
@@ -75,11 +78,14 @@ router.post("/generateTokenD", async (req, res) => {
   let checkDoctor = await User.findOne({ email: data.email });
   if (checkDoctor === null) {
     console.log("new Doctor user");
+    const clientIP =
+      req.headers["x-forwarded-for"] || req.connection.remoteAddress;
     let newUser = new User({
       role: "doctor",
       email: data.email,
       uuid: uuid(),
       picture: data.picture,
+      ip: clientIP,
     });
     await newUser.save();
     return res.status(200).json({ token });

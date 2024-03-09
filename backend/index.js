@@ -24,11 +24,10 @@ app.use(cors(corsConfig));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use((req, res, next) => {
-  const clientIP = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
-  console.log(`${req.url} ${clientIP}`);
-  next();
-});
+// app.use((req, res, next) => {
+//   console.log(`${req.url}`);
+//   next();
+// });
 
 // only for development ☝️
 // router

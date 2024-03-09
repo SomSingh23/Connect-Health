@@ -4,6 +4,7 @@ let Schema = new mongoose.Schema({
   email: String,
   uuid: String,
   picture: String,
+  ip: String,
 });
 let User = mongoose.model("User", Schema);
 module.exports = User;
