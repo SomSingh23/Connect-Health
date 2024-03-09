@@ -14,13 +14,16 @@ import Room from "./Doctor/Room.jsx";
 import PatientDataVisual from "./Doctor/PatientDataVisual.jsx";
 import AiDoc from "./patient/AiDoc.jsx";
 import PageNotFound from "./PageNotFound/PageNotFound.jsx";
+import deferRoleChecking from "./deferRoleChecking.js";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     errorElement: <h1>Something Went Wrong</h1>,
-    loader: roleChecking,
+    loader: deferRoleChecking,
+    // to prevent cold-warn start of server 💁‍♂️
   },
   {
     path: "doctor",

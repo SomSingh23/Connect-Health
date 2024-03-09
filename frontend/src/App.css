@@ -7,3 +7,9 @@
   background-image: url("/bg/bg.jpg");
   background-size: cover;
 }
+.main-loader-fallback {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 84vh;
+}
