@@ -21,7 +21,7 @@ function Room() {
   const [isLoading, setIsLoading] = useState(false);
   const [isEmailDuplicate, setIsEmailDuplicate] = useState(false);
   const [showFlashy, setShowFlashy] = useState(false);
-  if (isLoading === true && isEmailDuplicate === false) {
+  if (isLoading === true) {
     return <FallBackUi />;
   }
   if (isLoading === false && isEmailDuplicate === true) {

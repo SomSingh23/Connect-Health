@@ -25,7 +25,7 @@ function PatientDataVisual() {
       navigate("/patient");
     }
   }, []);
-  if (isLoading === true && isEmailDuplicate === false) {
+  if (isLoading === true) {
     return <FallBackUi />;
   }
   if (role === "noRole" && isLoading === false && isEmailDuplicate === true) {
