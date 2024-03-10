@@ -10,6 +10,8 @@ import FallBackUi from "../Fallback/FallbackUi";
 import "./doctor.css";
 import BACKEND_URL from "../services/api";
 import axios from "axios";
+import SuccessMessage from "../FlashyMessage/SuccessMessage";
+import DuplicateEmail from "../FlashyMessage/DuplicateEmail";
 function Room() {
   const role = useLoaderData();
   const navigate = useNavigate();
@@ -18,11 +20,57 @@ function Room() {
   const [isLogout, setIsLogout] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [isEmailDuplicate, setIsEmailDuplicate] = useState(false);
+  const [showFlashy, setShowFlashy] = useState(false);
   if (isLoading === true && isEmailDuplicate === false) {
     return <FallBackUi />;
   }
   if (isLoading === false && isEmailDuplicate === true) {
-    return <h1>Doctor-Doctor Meeting is not allowed!</h1>;
+    return (
+      <>
+        {" "}
+        <Navbar isPatient={!isPatient} isDoctor={!isDoctor} />
+        <DuplicateEmail
+          message={"Only one doctor is allowed in the room at any given time."}
+        />
+        <div className="login_with_google">
+          <p style={{ margin: "0px", fontFamily: "Arial" }}>
+            Sign in as Patient
+          </p>
+
+          <img
+            src={button_logo}
+            height={"150px"}
+            width={"150px"}
+            alt="Google Login"
+          />
+          <GoogleLogin
+            onSuccess={async (credentialResponse) => {
+              setIsLoading(true);
+              let data = await axios.post(
+                `${BACKEND_URL}/api/auth/generateTokenP`,
+                {
+                  token: credentialResponse.credential,
+                }
+              );
+              if (data.data.token === "tokenNotGranted") {
+                setIsEmailDuplicate(true);
+                setIsLoading(false);
+                return;
+              }
+              localStorage.setItem("token", data.data.token);
+              setIsPatient(true);
+              setIsLogout(true);
+              setIsLoading(false);
+              setIsEmailDuplicate(false);
+              setShowFlashy(true);
+            }}
+            onError={() => {
+              console.log("Login Failed");
+            }}
+          />
+        </div>
+      </>
+    );
   }
   function randomID(len) {
     let result = "";
@@ -104,6 +152,8 @@ function Room() {
               setIsPatient(true);
               setIsLogout(true);
               setIsLoading(false);
+              setIsEmailDuplicate(false);
+              setShowFlashy(true);
             }}
             onError={() => {
               console.log("Login Failed");
@@ -116,6 +166,9 @@ function Room() {
   return (
     <>
       <Navbar isPatient={isPatient} isDoctor={isDoctor} isLogout={true} />
+      {showFlashy && (
+        <SuccessMessage message={"You're Now Logged in as a Patient"} />
+      )}
       <div>
         <div ref={myMeeting} />
       </div>

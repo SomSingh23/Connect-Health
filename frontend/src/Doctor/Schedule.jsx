@@ -9,6 +9,8 @@ import FallBackUi from "../Fallback/FallbackUi";
 import BACKEND_URL from "../services/api";
 import { useEffect } from "react";
 import axios from "axios";
+import SuccessMessage from "../FlashyMessage/SuccessMessage";
+import DuplicateEmail from "../FlashyMessage/DuplicateEmail";
 function Schedule() {
   const role = useLoaderData();
   const navigate = useNavigate();
@@ -18,6 +20,7 @@ function Schedule() {
   const [isLoading, setIsLoading] = useState(false);
   const [isEmailDuplicate, setIsEmailDuplicate] = useState(false);
   const [rid, setRid] = useState();
+  const [showFlashy, setShowFlashy] = useState(false);
   const HandleClick = useCallback(() => {
     navigate(`/doctor/schedule/${rid}`);
   }, [navigate, rid]);
@@ -30,8 +33,52 @@ function Schedule() {
   if (isLoading === true && isEmailDuplicate === false) {
     return <FallBackUi />;
   }
-  if (isLoading === false && isEmailDuplicate === true) {
-    return <h1>This Email is Associated with Patient Account</h1>;
+  if (role === "noRole" && isLoading === false && isEmailDuplicate === true) {
+    return (
+      <>
+        <Navbar isPatient={!isPatient} isDoctor={!isDoctor} />
+        <DuplicateEmail
+          message={"A Patient Account with This Email Already Exists"}
+        />
+        <div className="login_with_google">
+          <p style={{ margin: "0px", fontFamily: "Arial" }}>
+            Sign in as Doctor
+          </p>
+
+          <img
+            src={button_logo}
+            height={"150px"}
+            width={"150px"}
+            alt="Google Login"
+          />
+          <GoogleLogin
+            onSuccess={async (credentialResponse) => {
+              setIsLoading(true);
+              let data = await axios.post(
+                `${BACKEND_URL}/api/auth/generateTokenD`,
+                {
+                  token: credentialResponse.credential,
+                }
+              );
+              if (data.data.token === "tokenNotGranted") {
+                setIsEmailDuplicate(true);
+                setIsLoading(false);
+                return;
+              }
+              localStorage.setItem("token", data.data.token);
+              setIsDoctor(true);
+              setIsLogout(true);
+              setIsLoading(false);
+              setShowFlashy(true);
+              setIsEmailDuplicate(false);
+            }}
+            onError={() => {
+              console.log("Login Failed");
+            }}
+          />
+        </div>
+      </>
+    );
   }
   if (role === "noRole" && isPatient === false && isDoctor === false) {
     return (
@@ -66,6 +113,8 @@ function Schedule() {
               setIsDoctor(true);
               setIsLogout(true);
               setIsLoading(false);
+              setShowFlashy(true);
+              setIsEmailDuplicate(false);
             }}
             onError={() => {
               console.log("Login Failed");
@@ -78,6 +127,9 @@ function Schedule() {
   return (
     <>
       <Navbar isDoctor={true} isLogout={true} />
+      {showFlashy && (
+        <SuccessMessage message={"You're Now Logged in as a Doctor"} />
+      )}
       <div className="room_id_form">
         <div className="Opt">
           <input

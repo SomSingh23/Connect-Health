@@ -16,7 +16,7 @@
   flex-direction: column;
 }
 .patient {
-  margin-top: 50px;
+  margin-top: 100px;
   transition: all 1s; /* Smooth tra nsition */
   background-color: #ffffff; /* White background */
   border: 1px solid #ccc; /* Light gray border */
