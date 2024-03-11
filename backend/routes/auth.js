@@ -11,7 +11,6 @@ let wait5Second = () => {
     }, 5000);
   });
 };
-require("dotenv").config();
 router.get("/", (req, res) => {
   res.send("Auth api up and running :)");
 });
@@ -61,7 +60,6 @@ router.post("/generateTokenP", async (req, res) => {
   }
   return res.status(200).json({
     token: "tokenNotGranted",
-    picture: data.picture,
   });
 });
 
@@ -96,7 +94,6 @@ router.post("/generateTokenD", async (req, res) => {
   }
   return res.status(200).json({
     token: "tokenNotGranted",
-    picture: data.picture,
   });
 });
 module.exports = router;
