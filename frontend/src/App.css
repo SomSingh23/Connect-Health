@@ -4,7 +4,7 @@
   width: 100%;
   margin-left: 3rem;
   margin-right: 3rem;
-  background-image: url("/bg/bg.jpg");
+  background-image: url("/bg/bg.jpeg");
   background-size: cover;
 }
 .main-loader-fallback {
