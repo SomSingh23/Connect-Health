@@ -1,4 +1,4 @@
-![ConnectiHealth](https://socialify.git.ci/SomSingh23/ConnectiHealth/image?description=1&descriptionEditable=Health%20Care%20Access%20for%20Underserved%20Community&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto)
+![Connect-Health](https://socialify.git.ci/SomSingh23/Connect-Health/image?description=1&descriptionEditable=Health%20Care%20Access%20for%20Underserved%20Community&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Dark)
 
 ### *Deployment Link* : https://connectihealth.vercel.app
 
