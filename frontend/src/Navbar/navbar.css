@@ -1,11 +1,19 @@
-.navbar {
+.main_navbar {
   background-color: #f4f4f4;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  height: 74px;
+  flex-direction: row;
+  width: 93%;
+  height: 90px;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navbar a {
