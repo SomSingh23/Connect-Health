@@ -17,7 +17,10 @@ The overarching goal is to ensure that individuals from underserved communities 
 ## Features ⚙️
 ### Screenshots 📷
 - ### Home page
- - ![image](https://github.com/SomSingh23/Alpine_Hackiniiitp/assets/91485305/1447562d-661d-4496-aef6-864feedb4015)
+ - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/ec8cfadd-7a52-4973-a5c3-836889748960)
+ - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/90105fb3-23c4-49b4-97e5-46cad294bbbd)
+
+
 
 - ### AI Assistant
   - ![image](https://github.com/SomSingh23/Alpine_Hackiniiitp/assets/91485305/15b27955-c997-4664-b2f5-4b69623d0c35)
