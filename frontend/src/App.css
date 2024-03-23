@@ -68,6 +68,7 @@ img {
   font-family: "Roboto", sans-serif;
 }
 .chooserole {
+  margin-top: 40px;
   width: 400px;
   height: 400px;
   border-radius: 200px;
