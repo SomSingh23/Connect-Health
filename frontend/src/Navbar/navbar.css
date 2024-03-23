@@ -21,7 +21,7 @@
   font-size: 20px;
   text-decoration: none;
   color: #555;
-  padding: 30px;
+  padding: 35px;
   border-radius: 10px;
 }
 
@@ -35,15 +35,17 @@
   font-weight: bold;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 865px) {
+  .main_navbar {
+    width: 100px;
+    flex-direction: column;
+    margin-bottom: 400px;
+  }
   .navbar {
     flex-direction: column;
-    height: auto;
-    padding: 15px 20px;
   }
-
   .navbar a {
-    padding: 10px 0;
+    padding: 15px 0;
     text-align: center;
   }
 }

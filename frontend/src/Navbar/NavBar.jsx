@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./navbar.css";
-import navbarLogo from "../../public/navbar/connect-health-removebg-preview2.png";
+import navbarLogo from "/navbar/connect-health-removebg-preview2.png";
 export default function Navbar({ isPatient, isDoctor, isLogout }) {
   return (
     <>
@@ -10,7 +10,7 @@ export default function Navbar({ isPatient, isDoctor, isLogout }) {
           <Link to="/">Home</Link>
           {isPatient && <Link to="/patient">Patient</Link>}
           {isDoctor && <Link to="/doctor">Doctor</Link>}
-          {isPatient && <Link to="/ai_doctor">AI Doctor</Link>}
+          <Link to="/ai_doctor">AI Doctor</Link>
           <Link to="/chat_bot">AI Assistant</Link>
 
           {isLogout && (

@@ -1,15 +1,120 @@
 .home_page {
-  display: flex;
   height: 100vh;
   width: 100%;
-  margin-left: 3rem;
-  margin-right: 3rem;
-  background-image: url("/bg/bg.jpeg");
-  background-size: cover;
+}
+img {
+  border-radius: 10px;
 }
 .main-loader-fallback {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 84vh;
+}
+.main_card {
+  margin-top: 50px;
+  display: flex;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.main_card a {
+  text-decoration: none;
+  color: rgb(50, 50, 50);
+}
+.card {
+  /* font-family: "Roboto", sans-serif; */
+  padding: 16px;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.151);
+  box-sizing: border-box;
+  height: 300px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.card p {
+  font-size: 23px;
+}
+.card:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.402);
+}
+.card2 {
+  /* font-family: "Roboto", sans-serif; */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.164);
+  box-sizing: border-box;
+  height: 350px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.card2 p {
+  font-size: 26px;
+}
+.card2:hover {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.402);
+}
+.role {
+  margin: 0;
+  margin-top: 20px;
+  font-size: 40px;
+  font-weight: 200;
+  font-family: "Roboto", sans-serif;
+}
+.chooserole {
+  width: 400px;
+  height: 400px;
+  border-radius: 200px;
+}
+.main_chooserole {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.two_roles {
+  margin-top: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 25px;
+  box-sizing: border-box;
+}
+.two_roles a {
+  text-decoration: none;
+  color: rgb(50, 50, 50);
+}
+@media screen and (max-width: 865px) {
+  .home_page {
+    background-image: none;
+  }
+  .main_card {
+    flex-direction: column;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .card {
+    margin-top: 20px;
+  }
+  .card2 {
+    margin-top: 10px;
+  }
+  .two_roles {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
