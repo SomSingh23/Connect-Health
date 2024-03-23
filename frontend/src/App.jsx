@@ -69,17 +69,17 @@ let HomePageContent = () => {
   return (
     <>
       <div className="main_card">
-        <a href="/patient">
+        <Link to={"/patient"}>
           {" "}
           <Card img={Thumbnail1} text="Virtual Consultation" />
-        </a>
+        </Link>
 
-        <a href="/ai_doctor">
+        <Link to={"/ai_doctor"}>
           <Card img={Thumbnail2} text="AI Doctor" />
-        </a>
-        <a href="/chat_bot">
+        </Link>
+        <Link to={"/chat_bot"}>
           <Card img={Thumbnail3} text="AI Assistant" />
-        </a>
+        </Link>
       </div>
     </>
   );
@@ -118,13 +118,13 @@ let ChooseRole = () => {
       </div>
 
       <div className="two_roles">
-        <a href="/patient">
+        <Link to={"/patient"}>
           <Card2 img={Patient} text="Patient" />
-        </a>
+        </Link>
 
-        <a href="/doctor">
+        <Link to={"/doctor"}>
           <Card2 img={Thumbnail4} text="Doctor" />
-        </a>
+        </Link>
       </div>
     </>
   );

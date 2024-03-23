@@ -44,11 +44,11 @@ img {
 }
 .card2 {
   /* font-family: "Roboto", sans-serif; */
-  padding: 20px;
+  padding: 35px;
   border-radius: 15px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.164);
   box-sizing: border-box;
-  height: 350px;
+  height: 370px;
   width: 250px;
   display: flex;
   flex-direction: column;
@@ -58,7 +58,7 @@ img {
   font-size: 26px;
 }
 .card2:hover {
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.402);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.402);
 }
 .role {
   margin: 0;
