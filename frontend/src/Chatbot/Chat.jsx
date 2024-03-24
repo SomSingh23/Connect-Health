@@ -1,10 +1,12 @@
 import "./chat.css";
 import Navbar from "../Navbar/NavBar";
 import { useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, Await } from "react-router-dom";
 import { marked } from "marked";
 import axios from "axios";
 import BACKEND_URL from "../services/api";
+import { Suspense } from "react";
+import { ThreeDots } from "react-loader-spinner";
 const waitingMessages = [
   "Hang tight! I'm fetching the perfect response for you.",
   "Just a moment while I gather some insights for you.",
@@ -153,29 +155,50 @@ const ChatBot = () => {
   );
 };
 let RealChatBot = () => {
-  let role = useLoaderData();
-  if (role === "patient") {
-    return (
-      <>
-        <Navbar isPatient={true} isDoctor={false} isLogout={true} />
-        <ChatBot />
-      </>
-    );
-  } else if (role === "doctor") {
-    return (
-      <>
-        <Navbar isPatient={false} isDoctor={true} isLogout={true} />
-        <ChatBot />
-      </>
-    );
-  } else {
-    return (
-      <>
-        <Navbar isPatient={true} isDoctor={true} isLogout={false} />
-        <ChatBot />
-      </>
-    );
-  }
+  let { role } = useLoaderData();
+  return(
+    <Suspense
+      fallback={
+        <div className="main-loader-fallback">
+          <ThreeDots
+            visible={true}
+            height="120"
+            width="120"
+            color="#4fa94d"
+            ariaLabel="three-dots-loading"
+            wrapperStyle={{}}
+          />
+        </div>
+      }
+    >
+      <Await resolve={role}>
+        {(role) => {
+          if (role === "patient") {
+            return (
+              <>
+                <Navbar isPatient={true} isDoctor={false} isLogout={true} />
+                <ChatBot />
+              </>
+            );
+          } else if (role === "doctor") {
+            return (
+              <>
+                <Navbar isPatient={false} isDoctor={true} isLogout={true} />
+                <ChatBot />
+              </>
+            );
+          } else {
+            return (
+              <>
+                <Navbar isPatient={true} isDoctor={true} isLogout={false} />
+                <ChatBot />
+              </>
+            );
+          }
+        }}
+      </Await>
+    </Suspense>
+  );
 };
 
 export default RealChatBot;

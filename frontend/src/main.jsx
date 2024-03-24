@@ -38,7 +38,7 @@ const router = createBrowserRouter([
   {
     path: "chat_bot",
     element: <ChatBot />,
-    loader: roleChecking,
+    loader: deferRoleChecking,
   },
 
   {
