@@ -92,6 +92,31 @@ img {
   text-decoration: none;
   color: rgb(50, 50, 50);
 }
+.login_role {
+  height: 550px;
+  display: flex;
+
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+  box-sizing: border-box;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.login_role a {
+  text-decoration: none;
+  color: rgb(50, 50, 50);
+}
+.login_role h1 {
+  font-size: 30px;
+  font-weight: 500;
+}
+.emoji {
+  font-size: 40px;
+}
+
 @media screen and (max-width: 865px) {
   .home_page {
     background-image: none;

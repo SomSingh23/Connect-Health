@@ -2,15 +2,13 @@ p {
   font-size: 25px;
 }
 .content {
-  height: 89vh;
+  height: 84vh;
+  padding: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: start;
-  padding-bottom: 50px;
-  padding-left: 65px;
-  padding-top: 30px;
   box-sizing: border-box;
+  justify-content: space-around;
+  align-items: start;
 }
 
 .prompt {
@@ -20,6 +18,8 @@ p {
   height: 8vh;
   width: 80vw;
   border: 1px solid #006600;
+  margin-left: auto;
+  margin-right: auto;
 }
 ::-webkit-scrollbar {
   width: 1px;
@@ -31,9 +31,11 @@ p {
   width: 80vw;
   border-radius: 10px;
   padding-right: 10px;
-  box-sizing: border-box;
   padding-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
   border: 2px solid #006600;
+  box-sizing: border-box;
   /* border-right: 2px solid rgb(0, 0, 0); */
 }
 .prompt input {
@@ -95,5 +97,16 @@ p {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@media screen and (max-width: 865px) {
+  .prompt button {
+    font-size: 30px;
+  }
+  .prompt input {
+    font-size: 23px;
+  }
+  p {
+    font-size: 23px;
   }
 }

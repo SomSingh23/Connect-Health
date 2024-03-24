@@ -122,3 +122,18 @@ h1 {
   justify-content: space-between;
   margin-bottom: 16px;
 }
+@media screen and (max-width: 865px) {
+  .TxT {
+    font-size: 12px;
+    width: 35%;
+  }
+  .SubmitBtn {
+    width: 40%;
+  }
+  .btn {
+    margin-top: 10px;
+  }
+  .btn_selected {
+    margin-top: 10px;
+  }
+}

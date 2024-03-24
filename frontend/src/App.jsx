@@ -34,7 +34,14 @@ export default function App() {
                 <>
                   <Navbar isPatient={true} isDoctor={false} isLogout={true} />
                   <div className="home_page">
-                    <h1>Logged in as patient</h1>
+                    <div className="login_role">
+                      <h1>
+                        Logged in as patient <span className="emoji">😷</span>
+                      </h1>
+                      <Link to={"/patient"}>
+                        <Card2 img={Patient} text="Patient" />
+                      </Link>
+                    </div>
                   </div>
                 </>
               );
@@ -43,7 +50,14 @@ export default function App() {
                 <>
                   <Navbar isPatient={false} isDoctor={true} isLogout={true} />
                   <div className="home_page">
-                    <h1>Logged in as Doctor</h1>
+                    <div className="login_role">
+                      <h1>
+                        Logged in as Doctor <span className="emoji">🧑‍⚕️</span>
+                      </h1>
+                      <Link to={"/doctor"}>
+                        <Card2 img={Thumbnail4} text="Doctor" />
+                      </Link>
+                    </div>
                   </div>
                 </>
               );
