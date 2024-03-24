@@ -5,7 +5,9 @@ export default function Navbar({ isPatient, isDoctor, isLogout }) {
   return (
     <>
       <div className="main_navbar">
-        <img src={navbarLogo} alt="Connect Health" height={100} />
+        <Link to={"/"}>
+          <img src={navbarLogo} alt="Connect Health" height={100} />
+        </Link>
         <div className="navbar">
           <Link to="/">Home</Link>
           {isPatient && <Link to="/patient">Patient</Link>}
