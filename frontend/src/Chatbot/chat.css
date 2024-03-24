@@ -36,7 +36,6 @@ p {
   margin-right: auto;
   border: 2px solid #006600;
   box-sizing: border-box;
-  /* border-right: 2px solid rgb(0, 0, 0); */
 }
 .prompt input {
   width: 100%;
@@ -108,5 +107,10 @@ p {
   }
   p {
     font-size: 23px;
+  }
+
+  .content {
+    height: 80vh;
+    padding: 10px;
   }
 }
