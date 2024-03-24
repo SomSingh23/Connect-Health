@@ -28,12 +28,12 @@ const router = createBrowserRouter([
   {
     path: "doctor",
     element: <Doctor />,
-    loader: roleChecking,
+    loader: deferRoleChecking,
   },
   {
     path: "patient",
     element: <Patient />,
-    loader: roleChecking,
+    loader: deferRoleChecking,
   },
   {
     path: "chat_bot",
