@@ -33,9 +33,7 @@ function Room() {
           message={"Only one doctor is allowed in the room at any given time."}
         />
         <div className="login_with_google">
-          <p style={{ margin: "0px", fontFamily: "Arial" }}>
-            Sign in as Patient
-          </p>
+          <p style={{ margin: "0px" }}>Sign in as Patient</p>
 
           <img
             src={button_logo}
@@ -124,9 +122,7 @@ function Room() {
       <>
         <Navbar isPatient={!isPatient} isDoctor={!isDoctor} />
         <div className="login_with_google">
-          <p style={{ margin: "0px", fontFamily: "Arial" }}>
-            Sign in as Patient
-          </p>
+          <p style={{ margin: "0px" }}>Sign in as Patient</p>
 
           <img
             src={button_logo}

@@ -41,9 +41,7 @@ function Schedule() {
           message={"A Patient Account with This Email Already Exists"}
         />
         <div className="login_with_google">
-          <p style={{ margin: "0px", fontFamily: "Arial" }}>
-            Sign in as Doctor
-          </p>
+          <p style={{ margin: "0px" }}>Sign in as Doctor</p>
 
           <img
             src={button_logo}
@@ -85,9 +83,7 @@ function Schedule() {
       <>
         <Navbar isPatient={!isPatient} isDoctor={!isDoctor} />
         <div className="login_with_google">
-          <p style={{ margin: "0px", fontFamily: "Arial" }}>
-            Sign in as Doctor
-          </p>
+          <p style={{ margin: "0px" }}>Sign in as Doctor</p>
 
           <img
             src={button_logo}

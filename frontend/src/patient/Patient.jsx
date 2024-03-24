@@ -37,9 +37,7 @@ function Patient() {
           message={"A Doctor Account with This Email Already Exists"}
         />
         <div className="login_with_google">
-          <p style={{ margin: "0px", fontFamily: "Arial" }}>
-            Sign in as Patient
-          </p>
+          <p style={{ margin: "0px" }}>Sign in as Patient</p>
 
           <img
             src={button_logo}
@@ -81,9 +79,7 @@ function Patient() {
       <>
         <Navbar isPatient={!isPatient} isDoctor={!isDoctor} />
         <div className="login_with_google">
-          <p style={{ margin: "0px", fontFamily: "Arial" }}>
-            Sign in as Patient
-          </p>
+          <p style={{ margin: "0px" }}>Sign in as Patient</p>
 
           <img
             src={button_logo}
