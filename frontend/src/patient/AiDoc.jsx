@@ -3,8 +3,10 @@ import Navbar from "../Navbar/NavBar";
 import { useState } from "react";
 import axios from "axios";
 import { marked } from "marked";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, Await } from "react-router-dom";
 import BACKEND_URL from "../services/api";
+import { Suspense } from "react";
+import { ThreeDots } from "react-loader-spinner";
 const ChatBot = () => {
   let [value, setValue] = useState("");
   let [data, setData] = useState({});
@@ -147,28 +149,49 @@ const ChatBot = () => {
   );
 };
 let AiDoc = () => {
-  let role = useLoaderData();
-  if (role === "patient") {
-    return (
-      <>
-        <Navbar isPatient={true} isDoctor={false} isLogout={true} />
-        <ChatBot />
-      </>
-    );
-  } else if (role === "doctor") {
-    return (
-      <>
-        <Navbar isPatient={false} isDoctor={true} isLogout={true} />
-        <ChatBot />
-      </>
-    );
-  } else {
-    return (
-      <>
-        <Navbar isPatient={true} isDoctor={true} isLogout={false} />
-        <ChatBot />
-      </>
-    );
-  }
+  let { role } = useLoaderData();
+  return (
+    <Suspense
+      fallback={
+        <div className="main-loader-fallback">
+          <ThreeDots
+            visible={true}
+            height="120"
+            width="120"
+            color="#4fa94d"
+            ariaLabel="three-dots-loading"
+            wrapperStyle={{}}
+          />
+        </div>
+      }
+    >
+      <Await resolve={role}>
+        {(role) => {
+          if (role === "patient") {
+            return (
+              <>
+                <Navbar isPatient={true} isDoctor={false} isLogout={true} />
+                <ChatBot />
+              </>
+            );
+          } else if (role === "doctor") {
+            return (
+              <>
+                <Navbar isPatient={false} isDoctor={true} isLogout={true} />
+                <ChatBot />
+              </>
+            );
+          } else {
+            return (
+              <>
+                <Navbar isPatient={true} isDoctor={true} isLogout={false} />
+                <ChatBot />
+              </>
+            );
+          }
+        }}
+      </Await>
+    </Suspense>
+  );
 };
 export default AiDoc;

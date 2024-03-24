@@ -77,7 +77,7 @@ const router = createBrowserRouter([
   {
     path: "ai_doctor",
     element: <AiDoc />,
-    loader: roleChecking,
+    loader: deferRoleChecking,
   },
   {
     path: "*",
