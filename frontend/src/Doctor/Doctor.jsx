@@ -22,11 +22,7 @@ function Doctor() {
   const [isLoading, setIsLoading] = useState(false);
   const [isEmailDuplicate, setIsEmailDuplicate] = useState(false);
   const [showFlashy, setShowFlashy] = useState(false);
-  useEffect(() => {
-    if (role === "patient") {
-      navigate("/patient");
-    }
-  }, []);
+
   return (
     <>
       <Suspense
@@ -45,6 +41,9 @@ function Doctor() {
       >
         <Await resolve={role}>
           {(role) => {
+            if (role === "patient") {
+              navigate("/patient");
+            }
             if (isLoading === true) {
               return <FallBackUi />;
             }
