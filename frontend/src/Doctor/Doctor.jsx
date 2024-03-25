@@ -5,7 +5,6 @@ import button_logo from "/button_logo/button_logo.png";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "./doctor.css";
-import { useEffect } from "react";
 import axios from "axios";
 import BACKEND_URL from "../services/api";
 import FallBackUi from "../Fallback/FallbackUi";
