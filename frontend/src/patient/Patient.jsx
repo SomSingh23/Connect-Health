@@ -62,6 +62,7 @@ function Patient() {
                   <h1 className="signHeading">Sign in as Patient</h1>
                   <div className="mainLogin">
                     <img
+                      draggable="false"
                       className="patient_image"
                       src={PatientPhoto}
                       alt="Patient"
@@ -93,6 +94,7 @@ function Patient() {
                         }}
                       />
                       <img
+                        draggable="false"
                         src={button_logo}
                         height={"230px"}
                         width={"230px"}
@@ -115,6 +117,7 @@ function Patient() {
                   <h1 className="signHeading">Sign in as Patient</h1>
                   <div className="mainLogin">
                     <img
+                      draggable="false"
                       className="patient_image"
                       src={PatientPhoto}
                       alt="Patient"
@@ -146,6 +149,7 @@ function Patient() {
                         }}
                       />
                       <img
+                        draggable="false"
                         src={button_logo}
                         height={"230px"}
                         width={"230px"}
