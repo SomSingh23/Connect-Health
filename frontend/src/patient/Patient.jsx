@@ -1,7 +1,8 @@
 import Navbar from "../Navbar/NavBar";
+import PatientPhoto from "/thumbnails/patient.png";
 import { useLoaderData, Await } from "react-router-dom";
 import { GoogleLogin } from "@react-oauth/google";
-import button_logo from "/button_logo/button_logo.png";
+import button_logo from "/button_logo/google_gif3.gif";
 import { useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
 import "./patient.css";
@@ -58,40 +59,47 @@ function Patient() {
                   <DuplicateEmail
                     message={"A Doctor Account with This Email Already Exists"}
                   />
-                  <div className="login_with_google">
-                    <p style={{ margin: "0px" }}>Sign in as Patient</p>
-
+                  <h1 className="signHeading">Sign in as Patient</h1>
+                  <div className="mainLogin">
                     <img
-                      src={button_logo}
-                      height={"150px"}
-                      width={"150px"}
-                      alt="Google Login"
+                      className="patient_image"
+                      src={PatientPhoto}
+                      alt="Patient"
                     />
-                    <GoogleLogin
-                      onSuccess={async (credentialResponse) => {
-                        setIsLoading(true);
-                        let data = await axios.post(
-                          `${BACKEND_URL}/api/auth/generateTokenP`,
-                          {
-                            token: credentialResponse.credential,
+                    <div className="login_with_google2">
+                      <GoogleLogin
+                        onSuccess={async (credentialResponse) => {
+                          setIsLoading(true);
+                          let data = await axios.post(
+                            `${BACKEND_URL}/api/auth/generateTokenP`,
+                            {
+                              token: credentialResponse.credential,
+                            }
+                          );
+                          if (data.data.token === "tokenNotGranted") {
+                            setIsEmailDuplicate(true);
+                            setIsLoading(false);
+                            return;
                           }
-                        );
-                        if (data.data.token === "tokenNotGranted") {
-                          setIsEmailDuplicate(true);
+                          localStorage.setItem("token", data.data.token);
+                          setIsPatient(true);
+                          setIsLogout(true);
                           setIsLoading(false);
-                          return;
-                        }
-                        localStorage.setItem("token", data.data.token);
-                        setIsPatient(true);
-                        setIsLogout(true);
-                        setIsLoading(false);
-                        setIsEmailDuplicate(false);
-                        setShowFlashy(true);
-                      }}
-                      onError={() => {
-                        console.log("Login Failed");
-                      }}
-                    />
+                          setIsEmailDuplicate(false);
+                          setShowFlashy(true);
+                        }}
+                        onError={() => {
+                          console.log("Login Failed");
+                        }}
+                      />
+                      <img
+                        src={button_logo}
+                        height={"230px"}
+                        width={"230px"}
+                        alt="Google Login"
+                        style={{ padding: "20px", boxSizing: "border-box" }}
+                      />
+                    </div>
                   </div>
                 </>
               );
@@ -104,40 +112,47 @@ function Patient() {
               return (
                 <>
                   <Navbar isPatient={!isPatient} isDoctor={!isDoctor} />
-                  <div className="login_with_google">
-                    <p style={{ margin: "0px" }}>Sign in as Patient</p>
-
+                  <h1 className="signHeading">Sign in as Patient</h1>
+                  <div className="mainLogin">
                     <img
-                      src={button_logo}
-                      height={"150px"}
-                      width={"150px"}
-                      alt="Google Login"
+                      className="patient_image"
+                      src={PatientPhoto}
+                      alt="Patient"
                     />
-                    <GoogleLogin
-                      onSuccess={async (credentialResponse) => {
-                        setIsLoading(true);
-                        let data = await axios.post(
-                          `${BACKEND_URL}/api/auth/generateTokenP`,
-                          {
-                            token: credentialResponse.credential,
+                    <div className="login_with_google2">
+                      <GoogleLogin
+                        onSuccess={async (credentialResponse) => {
+                          setIsLoading(true);
+                          let data = await axios.post(
+                            `${BACKEND_URL}/api/auth/generateTokenP`,
+                            {
+                              token: credentialResponse.credential,
+                            }
+                          );
+                          if (data.data.token === "tokenNotGranted") {
+                            setIsEmailDuplicate(true);
+                            setIsLoading(false);
+                            return;
                           }
-                        );
-                        if (data.data.token === "tokenNotGranted") {
-                          setIsEmailDuplicate(true);
+                          localStorage.setItem("token", data.data.token);
+                          setIsPatient(true);
+                          setIsLogout(true);
                           setIsLoading(false);
-                          return;
-                        }
-                        localStorage.setItem("token", data.data.token);
-                        setIsPatient(true);
-                        setIsLogout(true);
-                        setIsLoading(false);
-                        setShowFlashy(true);
-                        setIsEmailDuplicate(false);
-                      }}
-                      onError={() => {
-                        console.log("Login Failed");
-                      }}
-                    />
+                          setShowFlashy(true);
+                          setIsEmailDuplicate(false);
+                        }}
+                        onError={() => {
+                          console.log("Login Failed");
+                        }}
+                      />
+                      <img
+                        src={button_logo}
+                        height={"230px"}
+                        width={"230px"}
+                        alt="Google Login"
+                        style={{ padding: "20px", boxSizing: "border-box" }}
+                      />
+                    </div>
                   </div>
                 </>
               );
