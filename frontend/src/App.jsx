@@ -103,7 +103,7 @@ let Card = ({ img, text }) => {
   return (
     <>
       <div className="card">
-        <img src={img} alt="thumbnail" height={180} />
+        <img draggable="false" src={img} alt="thumbnail" height={180} />
         <p style={{ textAlign: "center" }}>{text}</p>
       </div>
     </>
@@ -114,7 +114,7 @@ let Card2 = ({ img, text }) => {
   return (
     <>
       <div className="card2">
-        <img src={img} alt="thumbnail" height={250} />
+        <img draggable="false" src={img} alt="thumbnail" height={250} />
         <p style={{ textAlign: "center" }}>{text}</p>
       </div>
     </>
