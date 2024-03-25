@@ -12,6 +12,7 @@ import BACKEND_URL from "../services/api";
 import axios from "axios";
 import SuccessMessage from "../FlashyMessage/SuccessMessage";
 import DuplicateEmail from "../FlashyMessage/DuplicateEmail";
+import PatientPhoto from "/thumbnails/patient.png";
 function Room() {
   const role = useLoaderData();
   const navigate = useNavigate();
@@ -32,40 +33,43 @@ function Room() {
         <DuplicateEmail
           message={"Only one doctor is allowed in the room at any given time."}
         />
-        <div className="login_with_google">
-          <p style={{ margin: "0px" }}>Sign in as Patient</p>
-
-          <img
-            src={button_logo}
-            height={"150px"}
-            width={"150px"}
-            alt="Google Login"
-          />
-          <GoogleLogin
-            onSuccess={async (credentialResponse) => {
-              setIsLoading(true);
-              let data = await axios.post(
-                `${BACKEND_URL}/api/auth/generateTokenP`,
-                {
-                  token: credentialResponse.credential,
+        <h1 className="signHeading">Sign in as Patient</h1>
+        <div className="mainLogin">
+          <img className="patient_image" src={PatientPhoto} alt="Patient" />
+          <div className="login_with_google2">
+            <GoogleLogin
+              onSuccess={async (credentialResponse) => {
+                setIsLoading(true);
+                let data = await axios.post(
+                  `${BACKEND_URL}/api/auth/generateTokenP`,
+                  {
+                    token: credentialResponse.credential,
+                  }
+                );
+                if (data.data.token === "tokenNotGranted") {
+                  setIsEmailDuplicate(true);
+                  setIsLoading(false);
+                  return;
                 }
-              );
-              if (data.data.token === "tokenNotGranted") {
-                setIsEmailDuplicate(true);
+                localStorage.setItem("token", data.data.token);
+                setIsPatient(true);
+                setIsLogout(true);
                 setIsLoading(false);
-                return;
-              }
-              localStorage.setItem("token", data.data.token);
-              setIsPatient(true);
-              setIsLogout(true);
-              setIsLoading(false);
-              setIsEmailDuplicate(false);
-              setShowFlashy(true);
-            }}
-            onError={() => {
-              console.log("Login Failed");
-            }}
-          />
+                setIsEmailDuplicate(false);
+                setShowFlashy(true);
+              }}
+              onError={() => {
+                console.log("Login Failed");
+              }}
+            />
+            <img
+              src={button_logo}
+              height={"230px"}
+              width={"230px"}
+              alt="Google Login"
+              style={{ padding: "20px", boxSizing: "border-box" }}
+            />
+          </div>
         </div>
       </>
     );
@@ -102,7 +106,7 @@ function Room() {
       sharedLinks: [
         {
           name: "Copy Link",
-          url: `https://alpine-frontend-hackiniiitp.vercel.app/doctor/schedule/${roomID}`,
+          url: `https://connectihealth.vercel.app/doctor/schedule/${roomID}`,
         },
       ],
       scenario: {
@@ -121,40 +125,43 @@ function Room() {
     return (
       <>
         <Navbar isPatient={!isPatient} isDoctor={!isDoctor} />
-        <div className="login_with_google">
-          <p style={{ margin: "0px" }}>Sign in as Patient</p>
-
-          <img
-            src={button_logo}
-            height={"150px"}
-            width={"150px"}
-            alt="Google Login"
-          />
-          <GoogleLogin
-            onSuccess={async (credentialResponse) => {
-              setIsLoading(true);
-              let data = await axios.post(
-                `${BACKEND_URL}/api/auth/generateTokenP`,
-                {
-                  token: credentialResponse.credential,
+        <h1 className="signHeading">Sign in as Patient</h1>
+        <div className="mainLogin">
+          <img className="patient_image" src={PatientPhoto} alt="Patient" />
+          <div className="login_with_google2">
+            <GoogleLogin
+              onSuccess={async (credentialResponse) => {
+                setIsLoading(true);
+                let data = await axios.post(
+                  `${BACKEND_URL}/api/auth/generateTokenP`,
+                  {
+                    token: credentialResponse.credential,
+                  }
+                );
+                if (data.data.token === "tokenNotGranted") {
+                  setIsEmailDuplicate(true);
+                  setIsLoading(false);
+                  return;
                 }
-              );
-              if (data.data.token === "tokenNotGranted") {
-                setIsEmailDuplicate(true);
+                localStorage.setItem("token", data.data.token);
+                setIsPatient(true);
+                setIsLogout(true);
                 setIsLoading(false);
-                return;
-              }
-              localStorage.setItem("token", data.data.token);
-              setIsPatient(true);
-              setIsLogout(true);
-              setIsLoading(false);
-              setIsEmailDuplicate(false);
-              setShowFlashy(true);
-            }}
-            onError={() => {
-              console.log("Login Failed");
-            }}
-          />
+                setIsEmailDuplicate(false);
+                setShowFlashy(true);
+              }}
+              onError={() => {
+                console.log("Login Failed");
+              }}
+            />
+            <img
+              src={button_logo}
+              height={"230px"}
+              width={"230px"}
+              alt="Google Login"
+              style={{ padding: "20px", boxSizing: "border-box" }}
+            />
+          </div>
         </div>
       </>
     );

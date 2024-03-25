@@ -65,11 +65,7 @@ const router = createBrowserRouter([
     path: "patient_request_consultation",
     element: (
       <div>
-        <h1>patient_request_consultation</h1>
-        <h1>
-          Email notifications will be sent to the doctor, and additional
-          functionalities will be incorporated...
-        </h1>
+        <h1>Working on it...</h1>
       </div>
     ),
     loader: roleChecking,

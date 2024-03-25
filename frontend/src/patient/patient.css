@@ -7,11 +7,12 @@
 .patient_image {
   height: 300px;
   padding: 40px;
+  border-radius: 70px;
 }
 .signHeading {
   margin: 0;
   font-size: 44px;
-  font-weight: 400;
+  font-weight: 600;
   padding: 30px;
   box-sizing: border-box;
 }
@@ -89,5 +90,6 @@
   .patient_image {
     height: 200px;
     padding: 20px;
+    border-radius: 35px;
   }
 }
