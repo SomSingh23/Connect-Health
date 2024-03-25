@@ -61,6 +61,7 @@ function Doctor() {
                   <h1 className="signHeading">Sign in as Doctor</h1>
                   <div className="mainLogin">
                     <img
+                     draggable="false"
                       className="doctor_image"
                       src={Thumbnail4}
                       alt="Doctor"
@@ -92,6 +93,7 @@ function Doctor() {
                         }}
                       />
                       <img
+                       draggable="false"
                         src={button_logo}
                         height={"230px"}
                         width={"230px"}
@@ -114,6 +116,7 @@ function Doctor() {
                   <h1 className="signHeading">Sign in as Doctor</h1>
                   <div className="mainLogin">
                     <img
+                     draggable="false"
                       className="doctor_image"
                       src={Thumbnail4}
                       alt="Doctor"
@@ -145,6 +148,7 @@ function Doctor() {
                         }}
                       />
                       <img
+                       draggable="false"
                         src={button_logo}
                         height={"230px"}
                         width={"230px"}

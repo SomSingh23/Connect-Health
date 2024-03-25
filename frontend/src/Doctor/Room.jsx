@@ -35,7 +35,12 @@ function Room() {
         />
         <h1 className="signHeading">Sign in as Patient</h1>
         <div className="mainLogin">
-          <img className="patient_image" src={PatientPhoto} alt="Patient" />
+          <img
+            draggable="false"
+            className="patient_image"
+            src={PatientPhoto}
+            alt="Patient"
+          />
           <div className="login_with_google2">
             <GoogleLogin
               onSuccess={async (credentialResponse) => {
@@ -63,6 +68,7 @@ function Room() {
               }}
             />
             <img
+              draggable="false"
               src={button_logo}
               height={"230px"}
               width={"230px"}
@@ -127,7 +133,12 @@ function Room() {
         <Navbar isPatient={!isPatient} isDoctor={!isDoctor} />
         <h1 className="signHeading">Sign in as Patient</h1>
         <div className="mainLogin">
-          <img className="patient_image" src={PatientPhoto} alt="Patient" />
+          <img
+            draggable="false"
+            className="patient_image"
+            src={PatientPhoto}
+            alt="Patient"
+          />
           <div className="login_with_google2">
             <GoogleLogin
               onSuccess={async (credentialResponse) => {
@@ -155,6 +166,7 @@ function Room() {
               }}
             />
             <img
+              draggable="false"
               src={button_logo}
               height={"230px"}
               width={"230px"}

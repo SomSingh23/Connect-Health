@@ -38,7 +38,12 @@ function PatientDataVisual() {
         />
         <h1 className="signHeading">Sign in as Doctor</h1>
         <div className="mainLogin">
-          <img className="doctor_image" src={Thumbnail4} alt="Doctor" />
+          <img
+            draggable="false"
+            className="doctor_image"
+            src={Thumbnail4}
+            alt="Doctor"
+          />
           <div className="login_with_google2">
             <GoogleLogin
               onSuccess={async (credentialResponse) => {
@@ -66,6 +71,7 @@ function PatientDataVisual() {
               }}
             />
             <img
+              draggable="false"
               src={button_logo}
               height={"230px"}
               width={"230px"}
@@ -83,7 +89,12 @@ function PatientDataVisual() {
         <Navbar isPatient={!isPatient} isDoctor={!isDoctor} />
         <h1 className="signHeading">Sign in as Doctor</h1>
         <div className="mainLogin">
-          <img className="doctor_image" src={Thumbnail4} alt="Doctor" />
+          <img
+            draggable="false"
+            className="doctor_image"
+            src={Thumbnail4}
+            alt="Doctor"
+          />
           <div className="login_with_google2">
             <GoogleLogin
               onSuccess={async (credentialResponse) => {
@@ -111,6 +122,7 @@ function PatientDataVisual() {
               }}
             />
             <img
+              draggable="false"
               src={button_logo}
               height={"230px"}
               width={"230px"}
