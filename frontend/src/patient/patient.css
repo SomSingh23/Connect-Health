@@ -3,7 +3,16 @@
   color: rgb(4, 48, 192);
   font-size: 25px;
 }
-
+.sendMail {
+  margin: 0;
+  margin-top: 150px;
+  padding: 30px;
+  font-size: 30px;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  box-sizing: border-box;
+  align-items: center;
+}
 .patient_image {
   height: 300px;
   padding: 40px;
@@ -72,7 +81,40 @@
 .patient a:last-child {
   margin-bottom: 0; /* Remove bottom margin from the last link */
 }
+.doctorCard {
+  margin-bottom: 40px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+  height: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.164);
+  border-radius: 12px;
+  padding: 20px;
+}
+.doctorCard:hover {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+}
+.doctorCard p {
+  margin: 0;
+}
+.doctorCard img {
+  height: 140px;
+  width: 140px;
+  border-radius: 10px;
+}
+.doctorCard button {
+  background-color: #04aa6d; /* Green */
 
+  color: white;
+
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
 @media screen and (max-width: 865px) {
   .signHeading {
     font-size: 28px;
@@ -92,4 +134,52 @@
     padding: 20px;
     border-radius: 35px;
   }
+  .sendMail {
+    margin-top: 250px;
+  }
+}
+
+.button-37 {
+  background-color: #13aa52;
+  border: 1px solid #13aa52;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  outline: 0;
+  padding: 10px 25px;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 150ms, box-shadow 150ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-37:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 0 3px 9px 0;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .button-37 {
+    padding: 10px 30px;
+  }
+}
+.doctorList {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  /* border: 1px solid black; */
+  padding: 5px;
+  box-sizing: border-box;
 }

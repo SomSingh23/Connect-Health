@@ -5,7 +5,7 @@ let mongoose = require("mongoose");
 let corsConfig = require("./cors/corsConfig");
 let chatRouter = require("./routes/chat");
 let autRouter = require("./routes/auth");
-
+let consultationRouter = require("./routes/consultation");
 require("dotenv").config();
 mongoose
   .connect(process.env.MONGO)
@@ -33,6 +33,7 @@ app.use(express.urlencoded({ extended: true }));
 // router
 app.use("/api/chat/", chatRouter);
 app.use("/api/auth/", autRouter);
+app.use("/api/consultation/", consultationRouter);
 // router
 app.get("/", (req, res) => {
   res.send("Boss Up and Running :)");
