@@ -4,6 +4,8 @@ let User = require("../database/user");
 let PatientRequestDoctor = require("../database/patientRequestDoctor");
 let sendEmail = require("../email/sendMail");
 let template = require("../email/template");
+let sendEmail2 = require("../email/sendMail2");
+let template2 = require("../email/template2");
 const router = express.Router();
 require("dotenv").config();
 
@@ -66,7 +68,11 @@ router.post("/request/:id", async (req, res) => {
     let doctorEmail = await User.findOne({ uuid: req.params.id });
 
     doctorEmail = doctorEmail.email;
-
+    sendEmail2(template2, patientEmail)
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((err) => console.log(err));
     await sendEmail(template, doctorEmail);
     console.log("Mail Sent");
     res.status(200).send("Mail Sent");

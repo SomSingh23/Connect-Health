@@ -18,6 +18,7 @@ import deferRoleChecking from "./deferRoleChecking.js";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RequestConsultation from "./patient/RequestConsulation.jsx";
 import deferRoleCheckingAndDoctors from "./deferRoleCheckingAndDoctors.js";
+import UploadReports from "./patient/UploadReports.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -70,6 +71,11 @@ const router = createBrowserRouter([
   {
     path: "ai_doctor",
     element: <AiDoc />,
+    loader: deferRoleChecking,
+  },
+  {
+    path: "upload_reports",
+    element: <UploadReports />,
     loader: deferRoleChecking,
   },
   {

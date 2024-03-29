@@ -1,21 +1,21 @@
 import Navbar from "../Navbar/NavBar";
+import FallBackUi2 from "../Fallback/FallbackUi2";
 import PatientPhoto from "/thumbnails/patient.png";
 import { useLoaderData, Await } from "react-router-dom";
 import { GoogleLogin } from "@react-oauth/google";
 import button_logo from "/button_logo/google_gif3.gif";
 import { useNavigate, Link } from "react-router-dom";
+import { marked } from "marked";
 import { useState } from "react";
 import "./patient.css";
 import BACKEND_URL from "../services/api";
 import axios from "axios";
 import FallBackUi from "../Fallback/FallbackUi";
-import FallBackUi2 from "../Fallback/FallbackUi2";
 import SuccessMessage from "../FlashyMessage/SuccessMessage";
 import DuplicateEmail from "../FlashyMessage/DuplicateEmail";
 import { Suspense } from "react";
 import { ThreeDots } from "react-loader-spinner";
-import DoctorCard from "./DoctorCard";
-function RequestConsulation() {
+function UploadReports() {
   let { role } = useLoaderData();
   const navigate = useNavigate();
   const [isPatient, setIsPatient] = useState(false);
@@ -24,24 +24,67 @@ function RequestConsulation() {
   const [isLoading, setIsLoading] = useState(false);
   const [isEmailDuplicate, setIsEmailDuplicate] = useState(false);
   const [showFlashy, setShowFlashy] = useState(false);
-  const [sendingMail, setSendingMail] = useState(false);
+  const [image, setImage] = useState(null); // Store only one image
+  const [buildingResp, setBuildingResp] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [resp, setResp] = useState("");
 
-  const requestDoctorLogin = async (id) => {
+  const handleImageChange = (event) => {
+    const file = event.target.files[0]; // Get only the first file
+    const reader = new FileReader();
+
+    reader.onload = (e) => {
+      setImage(e.target.result); // Set the image to be uploaded
+    };
+
+    reader.readAsDataURL(file);
+  };
+
+  const handleOptionClick = () => {
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault(); // Prevent the default form submission behavior
+    setIsLoading(true);
+    setBuildingResp(true);
     try {
-      setSendingMail(true);
-      setIsLoading(true);
-      let token = localStorage.getItem("token");
-      await axios.post(`${BACKEND_URL}/api/consultation/request/${id}`, {
-        token,
-      });
-      window.location.reload();
+      const formData = new FormData(); // Create a new FormData object
+
+      // Get the file input element
+      const fileInput = document.querySelector('input[type="file"]');
+
+      // Get the selected file from the file input element
+      const file = fileInput.files[0];
+
+      // Append the file data to the FormData object with the specified field name
+      formData.append("uploaded_files", file);
+
+      // Send the FormData object to the server using Axios
+      const serverRes = await axios.post(
+        `${BACKEND_URL}/api/image_to_text/textract`,
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data", // Set the content type to multipart/form-data
+          },
+        }
+      );
+      //   console.log(serverRes); // Log server response
+      const _gather = marked(serverRes.data.summaryData);
+      setResp(_gather);
       setIsLoading(false);
-      setSendingMail(false);
+      setBuildingResp(false);
     } catch (err) {
+      console.log(err); // Log any errors
       setIsLoading(false);
-      setSendingMail(false);
-      console.log(err);
+      setBuildingResp(false);
     }
+    closeModal();
   };
 
   return (
@@ -62,13 +105,13 @@ function RequestConsulation() {
       >
         <Await resolve={role}>
           {(role) => {
-            if (role.role === "doctor") {
+            if (role === "doctor") {
               navigate("/doctor");
             }
-            if (isLoading === true && sendingMail === true) {
+            if (isLoading === true && buildingResp === true) {
               return (
                 <>
-                  <h1 className="sendMail">Sending Mail to Doctor ✉️</h1>
+                  <h1 className="sendMail">Processing Your Request ⚙️</h1>
                   <FallBackUi2 />;
                 </>
               );
@@ -77,7 +120,7 @@ function RequestConsulation() {
               return <FallBackUi />;
             }
             if (
-              role.role === "noRole" &&
+              role === "noRole" &&
               isLoading === false &&
               isEmailDuplicate === true
             ) {
@@ -136,7 +179,7 @@ function RequestConsulation() {
               );
             }
             if (
-              role.role === "noRole" &&
+              role === "noRole" &&
               isPatient === false &&
               isDoctor === false
             ) {
@@ -198,24 +241,54 @@ function RequestConsulation() {
                       message={"You're Now Logged in as a Patient"}
                     />
                   )}
-                  <h1
-                    style={{ margin: 0, fontWeight: "bold", padding: "30px" }}
-                  >
-                    Request Consultation
-                  </h1>
-                  <div className="doctorList">
-                    {role.doctorList.map((doctor, index) => {
-                      return (
-                        <DoctorCard
-                          key={index}
-                          name={`Doctor ${index + 1}`}
-                          picture={doctor.picture}
-                          uuid={doctor.uuid}
-                          logicMagic={() => requestDoctorLogin(doctor.uuid)}
-                        />
-                      );
-                    })}
+                  <h1>Upload Past Reports</h1>
+                  <div className="uploadImageContainer">
+                    <button className="option-btn" onClick={handleOptionClick}>
+                      Upload
+                    </button>
                   </div>
+
+                  {showModal && (
+                    <div className="modal">
+                      <div className="modal-content">
+                        <span className="close" onClick={closeModal}>
+                          &times;
+                        </span>
+                        <h2 className="headinguploadimage">Upload Image</h2>
+                        <form onSubmit={handleSubmit}>
+                          <input
+                            accept="image/*"
+                            name="uploaded_files"
+                            className="INP"
+                            type="file"
+                            onChange={handleImageChange}
+                          />
+                          <button className="option-btn1" type="submit">
+                            Submit
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                  )}
+
+                  {image && ( // Render the uploaded image
+                    <div className="card-containerAdityaBugCoder">
+                      <div className="cardAdityaBugCoder">
+                        <img
+                          src={image}
+                          alt={`Uploaded Image`}
+                          className="uploaded-image"
+                        />
+                      </div>
+                      <p
+                        className="testcase2failed"
+                        style={{
+                          color: "#0c0c0c",
+                        }}
+                        dangerouslySetInnerHTML={{ __html: resp }}
+                      />
+                    </div>
+                  )}
                 </>
               );
             }
@@ -226,4 +299,4 @@ function RequestConsulation() {
   );
 }
 
-export default RequestConsulation;
+export default UploadReports;

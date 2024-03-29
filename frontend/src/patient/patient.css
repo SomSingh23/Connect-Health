@@ -3,6 +3,7 @@
   color: rgb(4, 48, 192);
   font-size: 25px;
 }
+
 .sendMail {
   margin: 0;
   margin-top: 150px;
@@ -137,6 +138,9 @@
   .sendMail {
     margin-top: 250px;
   }
+  .testcase2failed {
+    font-size: 18px;
+  }
 }
 
 .button-37 {
@@ -182,4 +186,158 @@
   /* border: 1px solid black; */
   padding: 5px;
   box-sizing: border-box;
+}
+
+/* DataUpload.css */
+
+/* Modal styles */
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Button styles */
+.uploadImageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.option-btn {
+  border: 1px solid rgb(255, 255, 255);
+  background-color: rgb(220, 25, 25);
+  color: rgb(240, 238, 238);
+  padding: 10px 20px;
+  border: none;
+  height: 50px;
+  font-family: "Arial", sans-serif;
+  width: 120px;
+  letter-spacing: 1px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.option-btn:hover {
+  transition: 0.3s;
+  font-family: "Arial", sans-serif;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  border: 2px solid rgb(0, 0, 0);
+  background-color: #f3f2f2;
+  color: rgb(220, 25, 25);
+}
+.option-btn1 {
+  background-color: rgb(3, 3, 3);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 20px;
+
+  font-weight: bold;
+}
+.option-btn1:hover {
+  transition: 1s;
+  background-color: white;
+  color: #000;
+  font-weight: bold;
+}
+
+.INP {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  background-color: rgb(93, 186, 164);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background-color: #5f9ea0;
+}
+
+/* Card container styles */
+.card-containerAdityaBugCoder {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  padding: 50px;
+  align-items: center;
+  box-sizing: border-box;
+  height: inherit;
+}
+
+/* Card styles */
+.cardAdityaBugCoder {
+  box-shadow: rgba(0, 0, 0, 0.1) 0 3px 6px 0;
+  border-radius: 8px;
+
+  width: inherit;
+  height: inherit;
+
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.testcase2failed {
+  padding-left: 40px;
+  padding-right: 40px;
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 3px 6px 0;
+  /* border: 1px solid rgb(41, 39, 39); */
+  border-radius: 10px;
+  font-family: "Lato", sans-serif;
+}
+.uploaded-image {
+  width: 100%; /* Make images smaller */
+  height: auto;
+  max-width: 100%; /* Ensure images don't exceed container width */
 }

@@ -177,6 +177,10 @@ function Patient() {
                       Request Consultation
                     </Link>
                     <br />
+                    <Link className="patient_function" to={"/upload_reports"}>
+                      Upload Past Reports
+                    </Link>
+                    <br />
                     <Link className="patient_function" to={"/ai_doctor"}>
                       AI Doctor
                     </Link>

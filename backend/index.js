@@ -5,6 +5,7 @@ let mongoose = require("mongoose");
 let corsConfig = require("./cors/corsConfig");
 let chatRouter = require("./routes/chat");
 let autRouter = require("./routes/auth");
+let image_to_text = require("./routes/imageToText");
 let consultationRouter = require("./routes/consultation");
 require("dotenv").config();
 mongoose
@@ -34,6 +35,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api/chat/", chatRouter);
 app.use("/api/auth/", autRouter);
 app.use("/api/consultation/", consultationRouter);
+app.use("/api/image_to_text/", image_to_text);
 // router
 app.get("/", (req, res) => {
   res.send("Boss Up and Running :)");
