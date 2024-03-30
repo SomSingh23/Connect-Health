@@ -19,7 +19,7 @@ AWS.config.update({
 const textract = new AWS.Textract();
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "./");
+    cb(null, "/");
   },
   filename: (req, file, cb) => {
     let newUUID = uuid();
@@ -31,6 +31,8 @@ const storage = multer.diskStorage({
     cb(null, `/tmp/${newUUID}-${file.originalname}`);
   },
 });
+router.use(express.static(path.join(__dirname, "public")));
+
 router.use(bodyParser.json({ limit: "50mb" }));
 router.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
 
