@@ -19,7 +19,7 @@ AWS.config.update({
 const textract = new AWS.Textract();
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "/");
+    cb(null, "./");
   },
   filename: (req, file, cb) => {
     let newUUID = uuid();
@@ -28,11 +28,10 @@ const storage = multer.diskStorage({
     // console.log(x);
     // const fileExtension = path.extname(file.originalname).toLowerCase();
     // console.log(fileExtension);
-    cb(null, `/tmp/${newUUID}-${file.originalname}`);
+    cb(null, `${newUUID}-${file.originalname}`);
   },
 });
 router.use(express.static(path.join(__dirname, "public")));
-
 router.use(bodyParser.json({ limit: "50mb" }));
 router.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
 
@@ -63,11 +62,9 @@ router.post("/textract", upload.single("uploaded_files"), async (req, res) => {
 
   try {
     console.log(`${req.fileUUID}-${req.file.originalname}`);
-    let fullPath = path.join(
-      __dirname,
-      `../tmp/${req.fileUUID}-${req.file.originalname}`
-    );
-    console.log(fullPath);
+    let fullPath = `${req.fileUUID}-${req.file.originalname}`;
+
+    // console.log(fullPath);
     const fileBuffer = fs.readFileSync(fullPath);
 
     const params = {
