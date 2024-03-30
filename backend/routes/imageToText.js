@@ -28,7 +28,7 @@ const storage = multer.diskStorage({
     // console.log(x);
     // const fileExtension = path.extname(file.originalname).toLowerCase();
     // console.log(fileExtension);
-    cb(null, `./tmp/${newUUID}-${file.originalname}`);
+    cb(null, `/tmp/${newUUID}-${file.originalname}`);
   },
 });
 router.use(bodyParser.json({ limit: "50mb" }));
@@ -61,9 +61,12 @@ router.post("/textract", upload.single("uploaded_files"), async (req, res) => {
 
   try {
     console.log(`${req.fileUUID}-${req.file.originalname}`);
-    const fileBuffer = fs.readFileSync(
-      `./tmp/${req.fileUUID}-${req.file.originalname}`
+    let fullPath = path.join(
+      __dirname,
+      `../tmp/${req.fileUUID}-${req.file.originalname}`
     );
+    console.log(fullPath);
+    const fileBuffer = fs.readFileSync(fullPath);
 
     const params = {
       Document: {
