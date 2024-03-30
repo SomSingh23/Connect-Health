@@ -73,7 +73,8 @@ router.post("/request/:id", async (req, res) => {
         console.log(data);
       })
       .catch((err) => console.log(err));
-    await sendEmail(template, doctorEmail);
+    let finalDoctorTemplate = template(patientEmail);
+    await sendEmail(finalDoctorTemplate, doctorEmail);
     console.log("Mail Sent");
     res.status(200).send("Mail Sent");
   } catch (err) {

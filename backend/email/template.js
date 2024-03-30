@@ -1,42 +1,48 @@
-let template = `<!DOCTYPE html>
-<html lang="en">
-<head>
+let template = (pa) => {
+  return `
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consultation Request Notification</title>
     <style>
-        /* You can style the email template here */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            max-width: 600px;
-            margin: 20px auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #666;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 24px;
+        color: #333;
+      }
+      p {
+        font-size: 16px;
+        color: #555;
+      }
+      ol {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      li {
+        margin-bottom: 5px;
+      }
     </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Consultation Request Notification</h1>
-        <p>Doctor,</p>
-        <p>You have a pending invitation. Kindly review the consultation request and connect to the patient virtually as soon as possible.</p>
-        <p>Thank you.</p>
-    </div>
-</body>
-</html>
-`;
+  </head>
+  <body>
+    <h1>Consultation Request Notification</h1>
+    <p>Doctor,</p>
+    <p>You have a pending consultation request from this ${pa} address. Whenever you are free, kindly:</p>
+    <ol>
+      <li>Go to your dashboard.</li>
+      <li>Enter room ID (random 5 characters).</li>
+      <li>Once the meeting link is created, send the link to the email address provided in this email.</li>
+    </ol>
+    <p>Thank you,</p>
+    <p>Connect-Health</p>
+  </body>
+  </html>
+  `;
+};
 module.exports = template;
