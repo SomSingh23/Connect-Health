@@ -112,7 +112,7 @@ function Room() {
       sharedLinks: [
         {
           name: "Copy Link",
-          url: `https://connectihealth.vercel.app/doctor/schedule/${roomID}`,
+          url: `https://app.connect-health.xyz/doctor/schedule/${roomID}`,
         },
       ],
       scenario: {
