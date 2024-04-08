@@ -4,58 +4,103 @@
 
 <hr>
 
-## Preview 💫
- - ![image](https://github.com/SomSingh23/Alpine_Hackiniiitp/assets/91485305/f65332b0-f583-4b22-b7f4-ce7e68357980)
-
-## Visitor count as of 25/03/24 🚀
- - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/d69e3d69-0f66-4b51-bc32-5b99f1fc40fd)
-
-
 ## Introduction 😃
 Our project endeavors to tackle the critical issue of linking underserved patients with healthcare professionals. With a primary focus on enhancing accessibility, our aim is to create a seamless connection between underserved communities and doctors, addressing challenges such as geographical constraints and language barriers. By leveraging innovative technologies, particularly WebRTC, our web application facilitates virtual consultations, enabling patients to consult with doctors remotely.
 
 The overarching goal is to ensure that individuals from underserved communities have access to quality healthcare services, irrespective of their location or linguistic limitations. Through virtual consultations, patients can receive timely medical advice, treatment recommendations, and essential health education. By bridging the gap between patients and doctors, our project aims to promote health equity and improve health outcomes for underserved populations.
 
+## Visitor count as of 25/03/24 🚀
+ - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/d69e3d69-0f66-4b51-bc32-5b99f1fc40fd)
+
+## Workflows
+- ### Front-End Deployment
+  - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/8299d006-c57d-4feb-835e-1eb143436975)
+- ### OCR Implementation
+  - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/db1b6b15-b78e-4048-83d2-844490e87a1f)
 
 
 ## Features ⚙️
 ### Screenshots 📷
 - ### Home page
- - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/ec8cfadd-7a52-4973-a5c3-836889748960)
- - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/90105fb3-23c4-49b4-97e5-46cad294bbbd)
+ - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/f6a1cb16-b989-4070-918a-5b1147e2931a)
+
+ - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/fed67323-a64c-41a8-bf60-3287ee74e53e)
+
 
 
 
 - ### AI Assistant
-  - ![image](https://github.com/SomSingh23/Alpine_Hackiniiitp/assets/91485305/15b27955-c997-4664-b2f5-4b69623d0c35)
-  - ![image](https://github.com/SomSingh23/Alpine_Hackiniiitp/assets/91485305/0198cfdf-6002-43ae-bf51-27afcc035802)
+  - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/b5217def-4958-4096-91de-ae540be85b53)
+
+  - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/232d449e-88af-4e08-8a94-5d345beaf7a4)
+ 
+  - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/ddd76856-898e-44e6-b473-31418738f0b5)
+
+
+
+- ### AI Doctor
+  - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/a4e4a671-7017-4345-aad3-73256208b834)
+  - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/3f74bda6-71ca-4753-a8cc-bfb66fcc58d9)
+  - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/bad50fc5-a9b0-4666-a34c-048cfea51d44)
+  - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/abafdd0a-e3a7-4d1b-8aea-7595fa848afc)
+
+
+
+
+ 
 
 
 - ### Patient Page
-  - ![image](https://github.com/SomSingh23/Alpine_Hackiniiitp/assets/91485305/4550d091-c964-4441-b945-aebb48dc1758)
+  - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/75770585-a181-4f0c-b15e-9d196869181c)
+
 
 - ### Google Auth2.0 Client
-  - ![image](https://github.com/SomSingh23/Alpine_Hackiniiitp/assets/91485305/a00f8804-b66c-4410-a101-c1c33911aa59)
+  - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/bd82cdb2-a257-4b34-b944-5f73e317b6d3)
+  - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/2e940ba2-9b4b-46b1-a900-1ed456aa2a80)
+
+
 
 - ### Patient Dashboard
-  - ![image](https://github.com/SomSingh23/Alpine_Hackiniiitp/assets/91485305/453a7ac0-8ab0-4aa9-bac4-9c47b779a3fe)
+  - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/dd5d7d03-d2fd-4a62-b771-1f46d9d12797)
+  - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/b9b0372e-22ae-43de-aa20-b57272b4e4dd)
+  - ## Email notification on consultation request
+  - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/04ffdb44-0eb7-4338-bdf1-f4f07d325309)
+  
+  - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/0c11479a-b7b0-4851-8b0a-0669ffbf9f42)
 
-- ### AI Doctor
-  - ![image](https://github.com/SomSingh23/Alpine_Hackiniiitp/assets/91485305/8b92f598-2fca-45a7-9619-1fc100537973)
-  - ![image](https://github.com/SomSingh23/Alpine_Hackiniiitp/assets/91485305/b8b69cd2-5cfc-42a6-be0a-f768eb11fe20)
-  - ![image](https://github.com/SomSingh23/Alpine_Hackiniiitp/assets/91485305/888dbd81-f672-4fd4-8c99-03ca08a99ea4)
+  - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/fd778d72-af61-46c5-996d-c473fbaf4fe1)
+
+
+
+- ### OCR
+- ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/6ace44ec-6f7a-4b0c-b1c4-7a7f7e9f8931)
+- ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/0c471ffd-fbc8-4fad-8439-9e24655e7de1)
+- ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/b4803c1f-6b89-4b9f-8c20-6629c66be3c3)
+- ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/0454a69f-7412-47a7-a7d9-1a059d6e6226)
+- ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/c0ed9e55-b80d-4db7-93ca-b29ba8bdab66)
+
+
+
+
+
 
 - ### Doctor Page
-  - ![image](https://github.com/SomSingh23/Alpine_Hackiniiitp/assets/91485305/96679dee-28b9-4092-bcb1-69df67a87435)
-  - ![image](https://github.com/SomSingh23/Alpine_Hackiniiitp/assets/91485305/f7585545-e98b-4d64-a177-f45b2ab46283)
+  - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/ed04f3cd-d11e-40e4-8583-638997e18c53)
+  - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/7946f67c-b013-4477-b01b-57295e1dfec2)
+
+
+  - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/871c6788-ebf6-4fe0-89ed-fb76e7d9f2fc)
+
 
 - ### Consulation
-  - ![image](https://github.com/SomSingh23/Alpine_Hackiniiitp/assets/91485305/67732d45-6610-4a50-b564-b1d53892f061)
-  - ![image](https://github.com/SomSingh23/Alpine_Hackiniiitp/assets/91485305/d188fd6b-6ab7-4fe8-8ffa-5874bf8b5a73)
-  - ![image](https://github.com/SomSingh23/Alpine_Hackiniiitp/assets/91485305/18d61148-10b3-4c94-b02a-0bbbbf89df75)
-  - ![image](https://github.com/SomSingh23/Alpine_Hackiniiitp/assets/91485305/ce0f6bba-08a3-4162-b574-654e516844c4)
-  - ![image](https://github.com/SomSingh23/Alpine_Hackiniiitp/assets/91485305/41a32ac5-6878-44c1-b2d5-c49589c1e091)
-  - ![image](https://github.com/SomSingh23/Alpine_Hackiniiitp/assets/91485305/b2feffe8-78b9-45f5-85e3-8333a84a9d06)
+  - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/c9f3d269-17c2-46ed-bb46-5572c9c0b89f)
+  - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/c4490f5f-d19b-4d5e-8c17-7dd48b0795ee)
+  - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/3a3cf300-dcd6-4a39-8443-5996db5c2589)
+  - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/d6e40680-82ab-4f76-b4c9-1401f1b5155c)
+
+
+
+
 
 
 
@@ -73,8 +118,7 @@ The overarching goal is to ensure that individuals from underserved communities 
 
 
 
-## Technologies Used 👩‍💻
- - ![image](https://github.com/SomSingh23/Alpine_Hackiniiitp/assets/91485305/942d8d3e-13a4-451f-8759-bc704e7d3d79)
+
 
 
 
