@@ -9,6 +9,7 @@ import { useLoaderData, Await, Link } from "react-router-dom";
 import { Suspense } from "react";
 import Navbar from "./Navbar/NavBar";
 import { ThreeDots } from "react-loader-spinner";
+import Copyright from "./Copyright/Copyright";
 export default function App() {
   let { role } = useLoaderData();
   return (
@@ -140,6 +141,7 @@ let ChooseRole = () => {
           <Card2 img={Thumbnail4} text="Doctor" />
         </Link>
       </div>
+      <Copyright />
     </>
   );
 };
