@@ -1,4 +1,5 @@
 .footer {
+  width: 93%;
   margin-top: 50px;
   background-color: #f9f9f9;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.151);
@@ -8,6 +9,8 @@
   border-radius: 8px;
   font-family: "Lato", sans-serif;
   border-top: 1px solid #e0e0e0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer p {
