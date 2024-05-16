@@ -13,6 +13,7 @@ import axios from "axios";
 import SuccessMessage from "../FlashyMessage/SuccessMessage";
 import DuplicateEmail from "../FlashyMessage/DuplicateEmail";
 import PatientPhoto from "/thumbnails/patient.png";
+import Copyright from "../Copyright/Copyright";
 function Room() {
   const role = useLoaderData();
   const navigate = useNavigate();
@@ -77,6 +78,7 @@ function Room() {
             />
           </div>
         </div>
+        <Copyright />
       </>
     );
   }
@@ -175,6 +177,7 @@ function Room() {
             />
           </div>
         </div>
+        <Copyright />
       </>
     );
   }
@@ -184,9 +187,10 @@ function Room() {
       {showFlashy && (
         <SuccessMessage message={"You're Now Logged in as a Patient"} />
       )}
-      <div>
+      <div style={{ marginBottom: "200px" }}>
         <div ref={myMeeting} />
       </div>
+      <Copyright />
     </>
   );
 }

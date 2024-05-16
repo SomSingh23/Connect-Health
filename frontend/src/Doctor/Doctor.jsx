@@ -13,6 +13,7 @@ import DuplicateEmail from "../FlashyMessage/DuplicateEmail";
 import { Suspense } from "react";
 import { ThreeDots } from "react-loader-spinner";
 import Thumbnail4 from "/thumbnails/doctor2.png";
+import Copyright from "../Copyright/Copyright";
 function Doctor() {
   const { role } = useLoaderData();
   const navigate = useNavigate();
@@ -61,7 +62,7 @@ function Doctor() {
                   <h1 className="signHeading">Sign in as Doctor</h1>
                   <div className="mainLogin">
                     <img
-                     draggable="false"
+                      draggable="false"
                       className="doctor_image"
                       src={Thumbnail4}
                       alt="Doctor"
@@ -93,7 +94,7 @@ function Doctor() {
                         }}
                       />
                       <img
-                       draggable="false"
+                        draggable="false"
                         src={button_logo}
                         height={"230px"}
                         width={"230px"}
@@ -102,6 +103,7 @@ function Doctor() {
                       />
                     </div>
                   </div>
+                  <Copyright />
                 </>
               );
             }
@@ -116,7 +118,7 @@ function Doctor() {
                   <h1 className="signHeading">Sign in as Doctor</h1>
                   <div className="mainLogin">
                     <img
-                     draggable="false"
+                      draggable="false"
                       className="doctor_image"
                       src={Thumbnail4}
                       alt="Doctor"
@@ -148,7 +150,7 @@ function Doctor() {
                         }}
                       />
                       <img
-                       draggable="false"
+                        draggable="false"
                         src={button_logo}
                         height={"230px"}
                         width={"230px"}
@@ -157,6 +159,7 @@ function Doctor() {
                       />
                     </div>
                   </div>
+                  <Copyright />
                 </>
               );
             }
@@ -180,6 +183,7 @@ function Doctor() {
                     Patient Data Visualization
                   </Link>
                 </div>
+                <Copyright />
               </>
             );
           }}

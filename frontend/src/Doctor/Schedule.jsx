@@ -12,6 +12,7 @@ import axios from "axios";
 import SuccessMessage from "../FlashyMessage/SuccessMessage";
 import DuplicateEmail from "../FlashyMessage/DuplicateEmail";
 import Thumbnail4 from "/thumbnails/doctor2.png";
+import Copyright from "../Copyright/Copyright";
 function Schedule() {
   const role = useLoaderData();
   const navigate = useNavigate();
@@ -85,6 +86,7 @@ function Schedule() {
             />
           </div>
         </div>
+        <Copyright />
       </>
     );
   }
@@ -136,6 +138,7 @@ function Schedule() {
             />
           </div>
         </div>
+        <Copyright />
       </>
     );
   }
@@ -158,6 +161,7 @@ function Schedule() {
           </button>
         </div>
       </div>
+      <Copyright />
     </>
   );
 }
