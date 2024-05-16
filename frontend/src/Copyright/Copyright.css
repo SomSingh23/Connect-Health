@@ -1,5 +1,5 @@
 .footer {
-  width: 93%;
+  width: 90%;
   margin-top: 50px;
   background-color: #f9f9f9;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.151);
@@ -12,7 +12,9 @@
   margin-left: auto;
   margin-right: auto;
 }
-
+.footer:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 2px 2px 8px 0;
+}
 .footer p {
   font-size: 19px;
   margin: 5px 0;
