@@ -15,6 +15,7 @@ import DuplicateEmail from "../FlashyMessage/DuplicateEmail";
 import { Suspense } from "react";
 import { ThreeDots } from "react-loader-spinner";
 import DoctorCard from "./DoctorCard";
+import Copyright from "../Copyright/Copyright";
 function RequestConsulation() {
   let { role } = useLoaderData();
   const navigate = useNavigate();
@@ -132,6 +133,7 @@ function RequestConsulation() {
                       />
                     </div>
                   </div>
+                  <Copyright />
                 </>
               );
             }
@@ -187,6 +189,7 @@ function RequestConsulation() {
                       />
                     </div>
                   </div>
+                  <Copyright />
                 </>
               );
             } else {
@@ -216,6 +219,7 @@ function RequestConsulation() {
                       );
                     })}
                   </div>
+                  <Copyright />
                 </>
               );
             }

@@ -13,6 +13,7 @@ import SuccessMessage from "../FlashyMessage/SuccessMessage";
 import DuplicateEmail from "../FlashyMessage/DuplicateEmail";
 import { Suspense } from "react";
 import { ThreeDots } from "react-loader-spinner";
+import Copyright from "../Copyright/Copyright";
 function Patient() {
   let { role } = useLoaderData();
   const navigate = useNavigate();
@@ -103,6 +104,7 @@ function Patient() {
                       />
                     </div>
                   </div>
+                  <Copyright />
                 </>
               );
             }
@@ -158,6 +160,7 @@ function Patient() {
                       />
                     </div>
                   </div>
+                  <Copyright />
                 </>
               );
             } else {
@@ -185,6 +188,7 @@ function Patient() {
                       AI Doctor
                     </Link>
                   </div>
+                  <Copyright />
                 </>
               );
             }

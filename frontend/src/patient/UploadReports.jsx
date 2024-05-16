@@ -15,6 +15,7 @@ import SuccessMessage from "../FlashyMessage/SuccessMessage";
 import DuplicateEmail from "../FlashyMessage/DuplicateEmail";
 import { Suspense } from "react";
 import { ThreeDots } from "react-loader-spinner";
+import Copyright from "../Copyright/Copyright";
 function UploadReports() {
   let { role } = useLoaderData();
   const navigate = useNavigate();
@@ -175,6 +176,7 @@ function UploadReports() {
                       />
                     </div>
                   </div>
+                  <Copyright />
                 </>
               );
             }
@@ -230,6 +232,7 @@ function UploadReports() {
                       />
                     </div>
                   </div>
+                  <Copyright />
                 </>
               );
             } else {
@@ -289,6 +292,7 @@ function UploadReports() {
                       />
                     </div>
                   )}
+                  {image && <Copyright />}
                 </>
               );
             }
