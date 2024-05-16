@@ -16,16 +16,31 @@ export default function App() {
     <>
       <Suspense
         fallback={
-          <div className="main-loader-fallback">
-            <ThreeDots
-              visible={true}
-              height="120"
-              width="120"
-              color="#4fa94d"
-              ariaLabel="three-dots-loading"
-              wrapperStyle={{}}
-            />
-          </div>
+          <>
+            <p
+              style={{
+                margin: 0,
+                padding: "15px",
+                textAlign: "center",
+                marginBottom: "-70px",
+              }}
+            >
+              Backend deployed on serverless functions. It may take 30-40
+              seconds to switch from a cold start to a warm state. Please hold
+              on.
+            </p>
+            <br />
+            <div className="main-loader-fallback">
+              <ThreeDots
+                visible={true}
+                height="120"
+                width="120"
+                color="#4fa94d"
+                ariaLabel="three-dots-loading"
+                wrapperStyle={{}}
+              />
+            </div>
+          </>
         }
       >
         <Await resolve={role}>
