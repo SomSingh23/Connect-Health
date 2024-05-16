@@ -20,13 +20,13 @@ export default function App() {
             <p
               style={{
                 margin: 0,
-                padding: "15px",
+                padding: "20px",
                 textAlign: "center",
                 marginBottom: "-70px",
               }}
             >
               Backend deployed on serverless functions. It may take 30-40
-              seconds to switch from a cold start to a warm state. Please hold
+              seconds to switch from a cold state to a warm state. Please hold
               on.
             </p>
             <br />
