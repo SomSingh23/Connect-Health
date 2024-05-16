@@ -1,7 +1,7 @@
 {
-  "name": "iiit_pune_hackathon_backend",
+  "name": "connect-health",
   "version": "1.0.0",
-  "description": "will change this later on",
+  "description": "connect-health backend server",
   "main": "index.js",
   "author": "som singh lodhi (ssl)",
   "license": "MIT",
