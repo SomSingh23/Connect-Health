@@ -7,6 +7,7 @@ import { useLoaderData, Await } from "react-router-dom";
 import BACKEND_URL from "../services/api";
 import { Suspense } from "react";
 import { ThreeDots } from "react-loader-spinner";
+import Copyright from "../Copyright/Copyright";
 const ChatBot = () => {
   let [value, setValue] = useState("");
   let [data, setData] = useState({});
@@ -172,6 +173,7 @@ let AiDoc = () => {
               <>
                 <Navbar isPatient={true} isDoctor={false} isLogout={true} />
                 <ChatBot />
+                <Copyright />
               </>
             );
           } else if (role === "doctor") {
@@ -179,6 +181,7 @@ let AiDoc = () => {
               <>
                 <Navbar isPatient={false} isDoctor={true} isLogout={true} />
                 <ChatBot />
+                <Copyright />
               </>
             );
           } else {
@@ -186,6 +189,7 @@ let AiDoc = () => {
               <>
                 <Navbar isPatient={true} isDoctor={true} isLogout={false} />
                 <ChatBot />
+                <Copyright />
               </>
             );
           }

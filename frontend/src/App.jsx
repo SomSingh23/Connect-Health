@@ -44,6 +44,7 @@ export default function App() {
                       </Link>
                     </div>
                   </div>
+                  <Copyright />
                 </>
               );
             } else if (role === "doctor") {
@@ -60,6 +61,7 @@ export default function App() {
                       </Link>
                     </div>
                   </div>
+                  <Copyright />
                 </>
               );
             } else {

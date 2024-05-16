@@ -7,6 +7,7 @@ import axios from "axios";
 import BACKEND_URL from "../services/api";
 import { Suspense } from "react";
 import { ThreeDots } from "react-loader-spinner";
+import Copyright from "../Copyright/Copyright";
 const waitingMessages = [
   "Hang tight! I'm fetching the perfect response for you.",
   "Just a moment while I gather some insights for you.",
@@ -156,7 +157,7 @@ const ChatBot = () => {
 };
 let RealChatBot = () => {
   let { role } = useLoaderData();
-  return(
+  return (
     <Suspense
       fallback={
         <div className="main-loader-fallback">
@@ -178,6 +179,7 @@ let RealChatBot = () => {
               <>
                 <Navbar isPatient={true} isDoctor={false} isLogout={true} />
                 <ChatBot />
+                <Copyright />
               </>
             );
           } else if (role === "doctor") {
@@ -185,6 +187,7 @@ let RealChatBot = () => {
               <>
                 <Navbar isPatient={false} isDoctor={true} isLogout={true} />
                 <ChatBot />
+                <Copyright />
               </>
             );
           } else {
@@ -192,6 +195,7 @@ let RealChatBot = () => {
               <>
                 <Navbar isPatient={true} isDoctor={true} isLogout={false} />
                 <ChatBot />
+                <Copyright />
               </>
             );
           }
