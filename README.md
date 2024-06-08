@@ -193,6 +193,11 @@ The overarching goal is to ensure that individuals from underserved communities 
 
 10. **make sure `Connect-Health/frontend/src/services/api.js` looks exactly same**
    - make sure you comment out production links and uncomment out developoment links
+     
+     <br>
+     
+     ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/66d3527d-b75c-4865-955c-9bb5f521d5a5)
+
 
      
 
