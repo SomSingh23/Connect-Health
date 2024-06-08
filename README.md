@@ -167,7 +167,7 @@ The overarching goal is to ensure that individuals from underserved communities 
    touch .env
    ```
 4. **.env file should look like this**
- - [Click Here](https://example.com) for more details.
+ - [Click Here](https://som-url.vercel.app/P1b7BLp3of) for more details.
    
      
 
