@@ -148,7 +148,7 @@ The overarching goal is to ensure that individuals from underserved communities 
    cd Connect-Health
    ```
    ```bash
-   cd frontend
+   cd frontend/
    ```
    ```bash
    yarn or npm install or npm i
@@ -168,6 +168,11 @@ The overarching goal is to ensure that individuals from underserved communities 
    ```
 4. **.env file should look like this**
  - [Click Here](https://som-url.vercel.app/P1b7BLp3of) for more details.
+
+5. **Once you have set up all the API keys, start the server on port 3001.**
+   ```bash
+   node index.js or nodemon index.js
+   ```
    
      
 
