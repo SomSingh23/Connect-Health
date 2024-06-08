@@ -174,16 +174,22 @@ The overarching goal is to ensure that individuals from underserved communities 
  - [Click Here](https://som-url.vercel.app/P1b7BLp3of) for more details.
 
 5. **Make sure `Connect-Health\backend\cors\corsConfig.js` looks exactly like this**
+   - make sure you comment out production links and uncomment out developoment links
+     
+     <br>
+     
+     ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/5ce3b020-d529-4ae6-acd2-c800ffc69e2f)
 
-6. **Once you have set up all the API keys, start the server on port 3001.**
+
+7. **Once you have set up all the API keys, start the server on port 3001.**
 
    ```bash
    node index.js or nodemon index.js
    ```
-7. **Once the server has started, you will see logs like this:**
+8. **Once the server has started, you will see logs like this:**
    - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/30de5e29-efb2-49ff-b798-7fbe821faa9f)
 
-8. **Move to frontend directory**
+9. **Move to frontend directory**
      
 
    
