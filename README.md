@@ -189,7 +189,11 @@ The overarching goal is to ensure that individuals from underserved communities 
 8. **Once the server has started, you will see logs like this:**
    - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/30de5e29-efb2-49ff-b798-7fbe821faa9f)
 
-9. **Move to frontend directory**
+9. **Move to frontend directory(root level)**
+
+10. **make sure `Connect-Health/frontend/src/services/api.js` looks exactly same**
+   - make sure you comment out production links and uncomment out developoment links
+
      
 
    
