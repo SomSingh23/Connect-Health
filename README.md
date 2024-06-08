@@ -140,10 +140,12 @@ The overarching goal is to ensure that individuals from underserved communities 
 
 ## How to Set-Up Locally
 1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/SomSingh23/Connect-Health.git
     ```
 2. **Install dependencies**:
+
    ```bash
    cd Connect-Health
    ```
@@ -163,17 +165,20 @@ The overarching goal is to ensure that individuals from underserved communities 
    yarn or npm install or npm i
    ```
 3. **Create .env file inside backend folder at root level**:
+
    ```bash
    touch .env
    ```
 4. **.env file should look like this**
+
  - [Click Here](https://som-url.vercel.app/P1b7BLp3of) for more details.
 
 5. **Once you have set up all the API keys, start the server on port 3001.**
+
    ```bash
    node index.js or nodemon index.js
    ```
-   
+6. **Once the server has started, you will see logs like this:**
      
 
    
