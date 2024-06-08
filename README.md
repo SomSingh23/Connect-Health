@@ -139,6 +139,7 @@ The overarching goal is to ensure that individuals from underserved communities 
 - ### Adtiya Sharma
 
 ## How to Set-Up Locally
+
 1. **Clone the repository:**
 
    ```bash
@@ -198,7 +199,14 @@ The overarching goal is to ensure that individuals from underserved communities 
      
      ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/66d3527d-b75c-4865-955c-9bb5f521d5a5)
 
+11. **To run the frontend in development mode**
+  
+    ```bash
+    yarn dev or npm run dev
+    ```
 
+
+### This concludes the instructions for setting up the project locally.
      
 
    
