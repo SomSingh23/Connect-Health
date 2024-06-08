@@ -138,6 +138,40 @@ The overarching goal is to ensure that individuals from underserved communities 
 ## Contributors 💁‍♂️
 - ### Adtiya Sharma
 
+## How to Set-Up Locally
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/SomSingh23/Connect-Health.git
+    ```
+2. **Install dependencies**:
+   ```bash
+   cd Connect-Health
+   ```
+   ```bash
+   cd frontend
+   ```
+   ```bash
+   yarn or npm install or npm i
+   ```
+   ```bash
+   cd ..
+   ```
+   ```bash
+   cd backend/
+   ```
+   ```bash
+   yarn or npm install or npm i
+   ```
+3. **Create .env file inside backend folder at root level**:
+   ```bash
+   touch .env
+   ```
+4. **.env file should look like this**
+ - [Click Here](https://example.com) for more details.
+   
+     
+
+   
 
 ## License ⚖️
  - MIT License
