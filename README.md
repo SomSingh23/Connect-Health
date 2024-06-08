@@ -179,6 +179,8 @@ The overarching goal is to ensure that individuals from underserved communities 
    node index.js or nodemon index.js
    ```
 6. **Once the server has started, you will see logs like this:**
+   - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/30de5e29-efb2-49ff-b798-7fbe821faa9f)
+
      
 
    
