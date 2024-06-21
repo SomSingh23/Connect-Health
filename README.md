@@ -24,6 +24,15 @@ The overarching goal is to ensure that individuals from underserved communities 
 - ### OCR Implementation
   - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/db1b6b15-b78e-4048-83d2-844490e87a1f)
 
+
+## Performance Matrix as of 21/06/24 
+ - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/4196e26f-86c7-4dcc-96ee-1590d3589df4)
+   
+<br>
+
+ - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/52e80abf-4012-4d76-b1d9-703eb49a03fa)
+
+
 ## Tech-Stack
 
 <div style="display: flex; align-items: flex-start;"><img src="https://techstack-generator.vercel.app/aws-icon.svg" alt="icon" width="100" height="100" /><img src="https://techstack-generator.vercel.app/react-icon.svg" alt="icon" width="100" height="100" /><img src="https://techstack-generator.vercel.app/restapi-icon.svg" alt="icon" width="100" height="100" /><img src="https://som-url.vercel.app/dLefJLqF0I" alt="icon" width="100" height="100" /><img src= "https://som-url.vercel.app/02otHPUtqq" alt="icon" width="100" height="100" /><img src="https://som-url.vercel.app/nqL9MYEv83" alt="icon" width="100" height="100" /><img src="https://som-url.vercel.app/QztDkV4QCQ" alt="icon" width="100" height="100" /><img src="https://som-url.vercel.app/l8IBQiDGUW" alt="icon" width="100" height="100" /><img src="https://som-url.vercel.app/iYbzB1fZwL" alt="icon" width="100" height="100" /> <img src="https://som-url.vercel.app/xw8zarDi6m" alt="icon" width="100" height="100" /> </div>
