@@ -218,6 +218,8 @@ The overarching goal is to ensure that individuals from underserved communities 
 
 ### This concludes the instructions for setting up the project locally.
      
+## Production 2 Status
+ - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/9a1df9bd-3785-4687-8f60-0e5e40d5ca4e)
 
    
 
