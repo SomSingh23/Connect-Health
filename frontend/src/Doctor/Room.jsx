@@ -99,8 +99,8 @@ function Room() {
   // console.log(id);
   const roomID = id || randomID(5);
   const myMeeting = async (element) => {
-    const appID = 1381775377;
-    const serverSecret = "2d4a506c26ad51f90d95b5d031214c66";
+    const appID = 1653169076;
+    const serverSecret = "ba466bb173ccdb251b277891fafcc1d2";
     const kitToken = ZegoUIKitPrebuilt.generateKitTokenForTest(
       appID,
       serverSecret,
