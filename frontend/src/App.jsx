@@ -49,6 +49,13 @@ export default function App() {
             if (role === "patient") {
               return (
                 <>
+                  <Helmet>
+                    <title>Connect Health</title>
+                    <meta
+                      name="description"
+                      content="Experience seamless healthcare with virtual patient-doctor video calls, interactive chatbots, and AI doctor options. Easily upload reports for OCR-based summarization, ensuring efficient analysis. Enjoy a smarter, more convenient approach to your health."
+                    />
+                  </Helmet>
                   <Navbar isPatient={true} isDoctor={false} isLogout={true} />
                   <div className="home_page">
                     <div className="login_role">
@@ -66,6 +73,13 @@ export default function App() {
             } else if (role === "doctor") {
               return (
                 <>
+                  <Helmet>
+                    <title>Connect Health</title>
+                    <meta
+                      name="description"
+                      content="Experience seamless healthcare with virtual patient-doctor video calls, interactive chatbots, and AI doctor options. Easily upload reports for OCR-based summarization, ensuring efficient analysis. Enjoy a smarter, more convenient approach to your health."
+                    />
+                  </Helmet>
                   <Navbar isPatient={false} isDoctor={true} isLogout={true} />
                   <div className="home_page">
                     <div className="login_role">
