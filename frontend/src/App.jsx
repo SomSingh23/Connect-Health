@@ -102,6 +102,7 @@ let HomePageContent = () => {
   return (
     <>
       <Helmet>
+        <title>Connect Health</title>
         <meta
           name="description"
           content="Experience seamless healthcare with virtual patient-doctor video calls, interactive chatbots, and AI doctor options. Easily upload reports for OCR-based summarization, ensuring efficient analysis. Enjoy a smarter, more convenient approach to your health."
