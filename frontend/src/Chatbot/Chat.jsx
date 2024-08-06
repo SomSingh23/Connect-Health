@@ -8,6 +8,7 @@ import BACKEND_URL from "../services/api";
 import { Suspense } from "react";
 import { ThreeDots } from "react-loader-spinner";
 import Copyright from "../Copyright/Copyright";
+import { Helmet } from "react-helmet";
 const waitingMessages = [
   "Hang tight! I'm fetching the perfect response for you.",
   "Just a moment while I gather some insights for you.",
@@ -54,6 +55,13 @@ const ChatBot = () => {
   return (
     <>
       {" "}
+      <Helmet>
+        <title>Connect Health : AI Assistant</title>
+        <meta
+          name="description"
+          content="The AI Assistant helps users by addressing queries and tasks. It provides detailed answers, offers recommendations, and assists with various activities based on user input."
+        />
+      </Helmet>
       <div className="app">
         <div className="content">
           <div className="conservation">

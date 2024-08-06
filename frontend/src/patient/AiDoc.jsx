@@ -8,6 +8,7 @@ import BACKEND_URL from "../services/api";
 import { Suspense } from "react";
 import { ThreeDots } from "react-loader-spinner";
 import Copyright from "../Copyright/Copyright";
+import { Helmet } from "react-helmet";
 const ChatBot = () => {
   let [value, setValue] = useState("");
   let [data, setData] = useState({});
@@ -54,6 +55,13 @@ const ChatBot = () => {
   };
   return (
     <>
+      <Helmet>
+        <title>Connect Health : AI Doctor</title>
+        <meta
+          name="description"
+          content="The AI-Doctor component allows users to select symptoms from a list or add custom ones. It then generates a comprehensive report that includes possible diagnoses, recovery options, and potential diseases."
+        />
+      </Helmet>
       <h1>Enter Symptoms</h1>
       <div className="Complete">
         <button

@@ -10,6 +10,7 @@ import { Suspense } from "react";
 import Navbar from "./Navbar/NavBar";
 import { ThreeDots } from "react-loader-spinner";
 import Copyright from "./Copyright/Copyright";
+import { Helmet } from "react-helmet";
 export default function App() {
   let { role } = useLoaderData();
   return (
@@ -100,6 +101,12 @@ export default function App() {
 let HomePageContent = () => {
   return (
     <>
+      <Helmet>
+        <meta
+          name="description"
+          content="Experience seamless healthcare with virtual patient-doctor video calls, interactive chatbots, and AI doctor options. Easily upload reports for OCR-based summarization, ensuring efficient analysis. Enjoy a smarter, more convenient approach to your health."
+        />
+      </Helmet>
       <div className="main_card">
         <Link to={"/patient"}>
           {" "}
