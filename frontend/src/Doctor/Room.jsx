@@ -14,6 +14,7 @@ import SuccessMessage from "../FlashyMessage/SuccessMessage";
 import DuplicateEmail from "../FlashyMessage/DuplicateEmail";
 import PatientPhoto from "/thumbnails/patient.png";
 import Copyright from "../Copyright/Copyright";
+import { Helmet } from "react-helmet";
 function Room() {
   const role = useLoaderData();
   const navigate = useNavigate();
@@ -30,6 +31,9 @@ function Room() {
     return (
       <>
         {" "}
+        <Helmet>
+          <title>Connect Health | Patient | Login</title>
+        </Helmet>
         <Navbar isPatient={!isPatient} isDoctor={!isDoctor} />
         <DuplicateEmail
           message={"Only one doctor is allowed in the room at any given time."}
@@ -132,6 +136,9 @@ function Room() {
   if (role === "noRole" && isPatient === false && isDoctor === false) {
     return (
       <>
+        <Helmet>
+          <title>Connect Health | Patient | Login</title>
+        </Helmet>
         <Navbar isPatient={!isPatient} isDoctor={!isDoctor} />
         <h1 className="signHeading">Sign in as Patient</h1>
         <div className="mainLogin">
@@ -183,6 +190,9 @@ function Room() {
   }
   return (
     <>
+      <Helmet>
+        <title>Connect Health | Patient | Room</title>
+      </Helmet>
       <Navbar isPatient={isPatient} isDoctor={isDoctor} isLogout={true} />
       {showFlashy && (
         <SuccessMessage message={"You're Now Logged in as a Patient"} />

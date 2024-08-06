@@ -13,6 +13,7 @@ import SuccessMessage from "../FlashyMessage/SuccessMessage";
 import DuplicateEmail from "../FlashyMessage/DuplicateEmail";
 import Thumbnail4 from "/thumbnails/doctor2.png";
 import Copyright from "../Copyright/Copyright";
+import { Helmet } from "react-helmet";
 function Schedule() {
   const role = useLoaderData();
   const navigate = useNavigate();
@@ -38,6 +39,9 @@ function Schedule() {
   if (role === "noRole" && isLoading === false && isEmailDuplicate === true) {
     return (
       <>
+        <Helmet>
+          <title>Connect Health | Doctor | Login</title>
+        </Helmet>
         <Navbar isPatient={!isPatient} isDoctor={!isDoctor} />
         <DuplicateEmail
           message={"A Patient Account with This Email Already Exists"}
@@ -93,6 +97,9 @@ function Schedule() {
   if (role === "noRole" && isPatient === false && isDoctor === false) {
     return (
       <>
+        <Helmet>
+          <title>Connect Health | Doctor | Login</title>
+        </Helmet>
         <Navbar isPatient={!isPatient} isDoctor={!isDoctor} />
         <h1 className="signHeading">Sign in as Doctor</h1>
         <div className="mainLogin">
@@ -144,6 +151,9 @@ function Schedule() {
   }
   return (
     <>
+      <Helmet>
+        <title>Connect Health | Doctor | Consultation</title>
+      </Helmet>
       <Navbar isDoctor={true} isLogout={true} />
       {showFlashy && (
         <SuccessMessage message={"You're Now Logged in as a Doctor"} />

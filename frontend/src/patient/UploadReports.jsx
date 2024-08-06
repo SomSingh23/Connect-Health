@@ -16,6 +16,7 @@ import DuplicateEmail from "../FlashyMessage/DuplicateEmail";
 import { Suspense } from "react";
 import { ThreeDots } from "react-loader-spinner";
 import Copyright from "../Copyright/Copyright";
+import { Helmet } from "react-helmet";
 function UploadReports() {
   let { role } = useLoaderData();
   const navigate = useNavigate();
@@ -112,6 +113,9 @@ function UploadReports() {
             if (isLoading === true && buildingResp === true) {
               return (
                 <>
+                  <Helmet>
+                    <title>Connect Health | Patient | Processing Request</title>
+                  </Helmet>
                   <h1 className="sendMail">Processing Your Request ⚙️</h1>
                   <FallBackUi2 />;
                 </>
@@ -128,6 +132,9 @@ function UploadReports() {
               return (
                 <>
                   {" "}
+                  <Helmet>
+                    <title>Connect Health | Patient | Login</title>
+                  </Helmet>
                   <Navbar isPatient={!isPatient} isDoctor={!isDoctor} />
                   <DuplicateEmail
                     message={"A Doctor Account with This Email Already Exists"}
@@ -187,6 +194,9 @@ function UploadReports() {
             ) {
               return (
                 <>
+                  <Helmet>
+                    <title>Connect Health | Patient | Login</title>
+                  </Helmet>
                   <Navbar isPatient={!isPatient} isDoctor={!isDoctor} />
                   <h1 className="signHeading">Sign in as Patient</h1>
                   <div className="mainLogin">
@@ -238,6 +248,9 @@ function UploadReports() {
             } else {
               return (
                 <>
+                  <Helmet>
+                    <title>Connect Health | Patient | Upload Reports</title>
+                  </Helmet>
                   <Navbar isPatient={true} isLogout={true} />
                   {showFlashy && (
                     <SuccessMessage

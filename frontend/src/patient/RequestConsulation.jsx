@@ -16,6 +16,7 @@ import { Suspense } from "react";
 import { ThreeDots } from "react-loader-spinner";
 import DoctorCard from "./DoctorCard";
 import Copyright from "../Copyright/Copyright";
+import { Helmet } from "react-helmet";
 function RequestConsulation() {
   let { role } = useLoaderData();
   const navigate = useNavigate();
@@ -85,6 +86,9 @@ function RequestConsulation() {
               return (
                 <>
                   {" "}
+                  <Helmet>
+                    <title>Connect Health | Patient | Login</title>
+                  </Helmet>
                   <Navbar isPatient={!isPatient} isDoctor={!isDoctor} />
                   <DuplicateEmail
                     message={"A Doctor Account with This Email Already Exists"}
@@ -144,6 +148,9 @@ function RequestConsulation() {
             ) {
               return (
                 <>
+                  <Helmet>
+                    <title>Connect Health | Patient | Login</title>
+                  </Helmet>
                   <Navbar isPatient={!isPatient} isDoctor={!isDoctor} />
                   <h1 className="signHeading">Sign in as Patient</h1>
                   <div className="mainLogin">
@@ -195,6 +202,11 @@ function RequestConsulation() {
             } else {
               return (
                 <>
+                  <Helmet>
+                    <title>
+                      Connect Health | Patient | Request Consultation
+                    </title>
+                  </Helmet>
                   <Navbar isPatient={true} isLogout={true} />
                   {showFlashy && (
                     <SuccessMessage

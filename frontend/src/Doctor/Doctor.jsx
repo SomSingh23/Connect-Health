@@ -57,11 +57,11 @@ function Doctor() {
               return (
                 <>
                   <Helmet>
-                    <title>Connect Health | Doctor</title>
                     <meta
                       name="description"
                       content="The Doctor feature allows medical professionals to receive emails from patients, consult them by creating virtual consultation rooms, and reply to messages via email."
                     />
+                    <title>Connect Health | Doctor</title>
                   </Helmet>
                   <Navbar isPatient={!isPatient} isDoctor={!isDoctor} />
                   <DuplicateEmail
@@ -123,11 +123,11 @@ function Doctor() {
               return (
                 <>
                   <Helmet>
-                    <title>Connect Health | Doctor | Login</title>
                     <meta
                       name="description"
                       content="The Doctor feature allows medical professionals to receive emails from patients, consult them by creating virtual consultation rooms, and reply to messages via email."
                     />
+                    <title>Connect Health | Doctor | Login</title>
                   </Helmet>
                   <Navbar isPatient={!isPatient} isDoctor={!isDoctor} />
                   <h1 className="signHeading">Sign in as Doctor</h1>
@@ -181,11 +181,11 @@ function Doctor() {
             return (
               <>
                 <Helmet>
-                  <title>Connect Health | Doctor</title>
                   <meta
                     name="description"
                     content="The Doctor feature allows medical professionals to receive emails from patients, consult them by creating virtual consultation rooms, and reply to messages via email."
                   />
+                  <title>Connect Health | Doctor</title>
                 </Helmet>
                 <Navbar isDoctor={true} isLogout={true} />
                 {showFlashy && (
