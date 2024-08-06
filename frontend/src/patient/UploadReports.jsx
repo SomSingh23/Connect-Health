@@ -176,8 +176,8 @@ function UploadReports() {
                       <img
                         draggable="false"
                         src={button_logo}
-                        height={"230px"}
-                        width={"230px"}
+                        height={"180px"}
+                        width={"180px"}
                         alt="Google Login"
                         style={{ padding: "20px", boxSizing: "border-box" }}
                       />
@@ -235,8 +235,8 @@ function UploadReports() {
                       <img
                         draggable="false"
                         src={button_logo}
-                        height={"230px"}
-                        width={"230px"}
+                        height={"180px"}
+                        width={"180px"}
                         alt="Google Login"
                         style={{ padding: "20px", boxSizing: "border-box" }}
                       />

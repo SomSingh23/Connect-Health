@@ -59,10 +59,7 @@ function Patient() {
                   {" "}
                   <Helmet>
                     <title>Connect Health | Patient</title>
-                    <meta
-                      name="description"
-                      content="The Patient feature enables users to send request emails to doctors, upload reports for OCR-based summaries, and access AI Doctors and AI Assistants for additional support and information."
-                    />
+                    <meta name="description" content="" />
                   </Helmet>
                   <Navbar isPatient={!isPatient} isDoctor={!isDoctor} />
                   <DuplicateEmail
@@ -105,8 +102,8 @@ function Patient() {
                       <img
                         draggable="false"
                         src={button_logo}
-                        height={"230px"}
-                        width={"230px"}
+                        height={"180px"}
+                        width={"180px"}
                         alt="Google Login"
                         style={{ padding: "20px", boxSizing: "border-box" }}
                       />
@@ -125,10 +122,7 @@ function Patient() {
                 <>
                   <Helmet>
                     <title>Connect Health | Patient | Login</title>
-                    <meta
-                      name="description"
-                      content="The Patient feature enables users to send request emails to doctors, upload reports for OCR-based summaries, and access AI Doctors and AI Assistants for additional support and information."
-                    />
+                    <meta name="description" content="" />
                   </Helmet>
                   <Navbar isPatient={!isPatient} isDoctor={!isDoctor} />
                   <h1 className="signHeading">Sign in as Patient</h1>
@@ -168,8 +162,8 @@ function Patient() {
                       <img
                         draggable="false"
                         src={button_logo}
-                        height={"230px"}
-                        width={"230px"}
+                        height={"180px"}
+                        width={"180px"}
                         alt="Google Login"
                         style={{ padding: "20px", boxSizing: "border-box" }}
                       />
@@ -183,10 +177,7 @@ function Patient() {
                 <>
                   <Helmet>
                     <title>Connect Health | Patient</title>
-                    <meta
-                      name="description"
-                      content="The Patient feature enables users to send request emails to doctors, upload reports for OCR-based summaries, and access AI Doctors and AI Assistants for additional support and information."
-                    />
+                    <meta name="description" content="" />
                   </Helmet>
                   <Navbar isPatient={true} isLogout={true} />
                   {showFlashy && (
