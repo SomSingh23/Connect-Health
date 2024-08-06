@@ -10,7 +10,7 @@
     "node": ">=16.14.2"
   },
   "scripts": {
-    "test": "npx jest isProducationReady.test.js"
+    "test": "npx jest isProductionReady.test.js"
   },
   "dependencies": {
     "@google/generative-ai": "^0.2.1",
