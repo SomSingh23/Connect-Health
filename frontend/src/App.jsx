@@ -50,7 +50,7 @@ export default function App() {
               return (
                 <>
                   <Helmet>
-                    <title>Connect Health</title>
+                    <title>Connect Health | Patient | Logged</title>
                     <meta
                       name="description"
                       content="Experience seamless healthcare with virtual patient-doctor video calls, interactive chatbots, and AI doctor options. Easily upload reports for OCR-based summarization, ensuring efficient analysis. Enjoy a smarter, more convenient approach to your health."
@@ -74,7 +74,7 @@ export default function App() {
               return (
                 <>
                   <Helmet>
-                    <title>Connect Health</title>
+                    <title>Connect Health | Doctor | Logged</title>
                     <meta
                       name="description"
                       content="Experience seamless healthcare with virtual patient-doctor video calls, interactive chatbots, and AI doctor options. Easily upload reports for OCR-based summarization, ensuring efficient analysis. Enjoy a smarter, more convenient approach to your health."

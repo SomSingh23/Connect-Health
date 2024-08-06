@@ -14,6 +14,7 @@ import DuplicateEmail from "../FlashyMessage/DuplicateEmail";
 import { Suspense } from "react";
 import { ThreeDots } from "react-loader-spinner";
 import Copyright from "../Copyright/Copyright";
+import { Helmet } from "react-helmet";
 function Patient() {
   let { role } = useLoaderData();
   const navigate = useNavigate();
@@ -56,6 +57,13 @@ function Patient() {
               return (
                 <>
                   {" "}
+                  <Helmet>
+                    <title>Connect Health | Patient</title>
+                    <meta
+                      name="description"
+                      content="The Patient feature enables users to send request emails to doctors, upload reports for OCR-based summaries, and access AI Doctors and AI Assistants for additional support and information."
+                    />
+                  </Helmet>
                   <Navbar isPatient={!isPatient} isDoctor={!isDoctor} />
                   <DuplicateEmail
                     message={"A Doctor Account with This Email Already Exists"}
@@ -115,6 +123,13 @@ function Patient() {
             ) {
               return (
                 <>
+                  <Helmet>
+                    <title>Connect Health | Patient | Login</title>
+                    <meta
+                      name="description"
+                      content="The Patient feature enables users to send request emails to doctors, upload reports for OCR-based summaries, and access AI Doctors and AI Assistants for additional support and information."
+                    />
+                  </Helmet>
                   <Navbar isPatient={!isPatient} isDoctor={!isDoctor} />
                   <h1 className="signHeading">Sign in as Patient</h1>
                   <div className="mainLogin">
@@ -166,6 +181,13 @@ function Patient() {
             } else {
               return (
                 <>
+                  <Helmet>
+                    <title>Connect Health | Patient</title>
+                    <meta
+                      name="description"
+                      content="The Patient feature enables users to send request emails to doctors, upload reports for OCR-based summaries, and access AI Doctors and AI Assistants for additional support and information."
+                    />
+                  </Helmet>
                   <Navbar isPatient={true} isLogout={true} />
                   {showFlashy && (
                     <SuccessMessage

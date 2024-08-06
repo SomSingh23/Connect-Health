@@ -56,7 +56,7 @@ const ChatBot = () => {
     <>
       {" "}
       <Helmet>
-        <title>Connect Health : AI Assistant</title>
+        <title>Connect Health | AI Assistant</title>
         <meta
           name="description"
           content="The AI Assistant helps users by addressing queries and tasks. It provides detailed answers, offers recommendations, and assists with various activities based on user input."

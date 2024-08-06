@@ -56,7 +56,7 @@ const ChatBot = () => {
   return (
     <>
       <Helmet>
-        <title>Connect Health : AI Doctor</title>
+        <title>Connect Health | AI Doctor</title>
         <meta
           name="description"
           content="The AI-Doctor component allows users to select symptoms from a list or add custom ones. It then generates a comprehensive report that includes possible diagnoses, recovery options, and potential diseases."

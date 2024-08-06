@@ -57,7 +57,7 @@ function Doctor() {
               return (
                 <>
                   <Helmet>
-                    <title>Connect Health : Doctor</title>
+                    <title>Connect Health | Doctor</title>
                     <meta
                       name="description"
                       content="The Doctor feature allows medical professionals to receive emails from patients, consult them by creating virtual consultation rooms, and reply to messages via email."
@@ -123,7 +123,7 @@ function Doctor() {
               return (
                 <>
                   <Helmet>
-                    <title>Connect Health : Doctor Login</title>
+                    <title>Connect Health | Doctor | Login</title>
                     <meta
                       name="description"
                       content="The Doctor feature allows medical professionals to receive emails from patients, consult them by creating virtual consultation rooms, and reply to messages via email."
@@ -181,7 +181,7 @@ function Doctor() {
             return (
               <>
                 <Helmet>
-                  <title>Connect Health : Doctor</title>
+                  <title>Connect Health | Doctor</title>
                   <meta
                     name="description"
                     content="The Doctor feature allows medical professionals to receive emails from patients, consult them by creating virtual consultation rooms, and reply to messages via email."
