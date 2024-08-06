@@ -44,12 +44,12 @@ img {
 }
 .card2 {
   /* font-family: "Roboto", sans-serif; */
-  padding: 35px;
+  padding: 25px;
   border-radius: 15px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.164);
   box-sizing: border-box;
-  height: 370px;
-  width: 250px;
+  height: 350px;
+  width: 290px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

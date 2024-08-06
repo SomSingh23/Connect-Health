@@ -5,6 +5,7 @@ import Thumbnail3 from "/thumbnails/chat.jpg";
 import Thumbnail4 from "/thumbnails/doctor2.png";
 import Patient from "/thumbnails/patient.png";
 import Vedio from "/thumbnails/role3.mp4";
+import Thumbnail5 from "/thumbnails/medical_report.jpg";
 import { useLoaderData, Await, Link } from "react-router-dom";
 import { Suspense } from "react";
 import Navbar from "./Navbar/NavBar";
@@ -127,7 +128,10 @@ let HomePageContent = () => {
           {" "}
           <Card img={Thumbnail1} text="Virtual Consultation" />
         </Link>
-
+        <Link to={"/upload_reports"}>
+          {" "}
+          <Card img={Thumbnail5} text="Report Summary" />
+        </Link>
         <Link to={"/ai_doctor"}>
           <Card img={Thumbnail2} text="AI Doctor" />
         </Link>

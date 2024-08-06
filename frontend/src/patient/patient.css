@@ -17,7 +17,7 @@
 .patient_image {
   height: 300px;
   padding: 40px;
-  border-radius: 70px;
+  border-radius: 55px;
 }
 .signHeading {
   margin: 0;
@@ -37,6 +37,7 @@
   height: 400px;
   margin-left: auto;
   margin-right: auto;
+  padding: 25px;
 }
 .login_with_google2 {
   display: flex;
@@ -131,7 +132,7 @@
     margin-bottom: 30px;
   }
   .patient_image {
-    height: 200px;
+    height: 180px;
     padding: 20px;
     border-radius: 35px;
   }
