@@ -124,9 +124,9 @@ let HomePageContent = () => {
         />
       </Helmet>
       <div className="main_card">
-        <Link to={"/patient"}>
+        <Link to={"/doctor/schedule"}>
           {" "}
-          <Card img={Thumbnail1} text="Virtual Consultation" />
+          <Card img={Thumbnail1} text="Start Consultation" />
         </Link>
         <Link to={"/upload_reports"}>
           {" "}

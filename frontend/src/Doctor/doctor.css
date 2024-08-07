@@ -17,11 +17,29 @@
   align-items: center;
 }
 .buttonDsb {
-  margin: 10px;
-  padding: 10px 20px;
+  margin: 12px;
+  width: 310px;
+  height: 30px;
+  padding: 8px;
   border: 1px solid #ccc;
+  text-align: center;
   border-radius: 5px;
   cursor: pointer;
+}
+.buttonDsb2 {
+  margin: 12px;
+  width: 310px;
+  height: 40px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  text-align: center;
+  border-radius: 5px;
+  transition: 1s all;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.buttonDsb2:hover {
+  background-color: #d9d7d7;
+  font-size: 14px;
 }
 .buttonDsb:disabled {
   background-color: #ccc;
