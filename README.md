@@ -74,13 +74,16 @@ The overarching goal is to ensure that individuals from underserved communities 
 
 
 - ### Patient Page
-  - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/75770585-a181-4f0c-b15e-9d196869181c)
+  - ![image](https://github.com/user-attachments/assets/375a495d-8ba7-4eb9-9e26-139b2b939b2f)
+
+
 
 
 - ### Google Auth2.0 Client
   - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/bd82cdb2-a257-4b34-b944-5f73e317b6d3)
   - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/2e940ba2-9b4b-46b1-a900-1ed456aa2a80)
-  - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/6ba02208-d2a0-40a6-a78e-3eb9b9ac5547)
+  - ![image](https://github.com/user-attachments/assets/0b59dfa5-de50-4253-bf22-4409e25f9d8a)
+
 
 
 
