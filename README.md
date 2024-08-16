@@ -113,12 +113,16 @@ The overarching goal is to ensure that individuals from underserved communities 
 
 
 - ### Doctor Page
-  - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/ed04f3cd-d11e-40e4-8583-638997e18c53)
+  - ![image](https://github.com/user-attachments/assets/be250ec2-89fe-43e4-aa43-b825c4bd6c49)
+
+
   - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/7946f67c-b013-4477-b01b-57295e1dfec2)
 
 
   - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/871c6788-ebf6-4fe0-89ed-fb76e7d9f2fc)
-  - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/f98ff112-1ceb-4688-86d5-06b8bbf3f37a)
+  - ![image](https://github.com/user-attachments/assets/828e3342-9150-4fd2-92f3-53ca13bd00d9)
+
+
 
 
 
