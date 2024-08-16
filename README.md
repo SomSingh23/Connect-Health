@@ -43,9 +43,11 @@ The overarching goal is to ensure that individuals from underserved communities 
 ## Features ⚙️
 ### Screenshots 📷
 - ### Home page
- - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/f6a1cb16-b989-4070-918a-5b1147e2931a)
+ - ![image](https://github.com/user-attachments/assets/c52e668b-8281-42cc-8b9d-44d79b98aaf2)
 
- - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/fed67323-a64c-41a8-bf60-3287ee74e53e)
+
+ - ![image](https://github.com/user-attachments/assets/1a5be857-5893-44fd-8047-8c13686435ff)
+
 
 
 
