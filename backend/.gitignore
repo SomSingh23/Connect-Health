@@ -134,3 +134,6 @@ dist
 *.jpg
 *.jpeg
 *.gif
+
+# old_index.txt
+old_index.txt

@@ -6,17 +6,20 @@ const router = express.Router();
 const multer = require("multer");
 const bodyParser = require("body-parser");
 const fs = require("fs");
-const AWS = require("aws-sdk");
+
+const { Textract } = require("@aws-sdk/client-textract");
+
 const path = require("path");
 
-AWS.config.update({
-  accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+// V3 sdk
+const textract = new Textract({
+  credentials: {
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+  },
+
   region: process.env.AWS_REGION,
 });
-
-// Create a new Textract instance
-const textract = new AWS.Textract();
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, "./");
@@ -72,7 +75,7 @@ router.post("/textract", upload.single("uploaded_files"), async (req, res) => {
         Bytes: fileBuffer,
       },
     };
-    const data = await textract.detectDocumentText(params).promise();
+    const data = await textract.detectDocumentText(params);
 
     const summaryReport = data.Blocks.filter(
       (block) => block.BlockType === "LINE"
