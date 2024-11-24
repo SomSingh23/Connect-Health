@@ -6,9 +6,8 @@ const Footer = () => {
       <p>&copy; 2024 Som Singh Lodhi. All rights reserved.</p>
 
       <p>
-        Website by <a href="https://github.com/somsingh23">Som</a>,{" "}
-        <a href="https://github.com/Adit2002">Aditya</a> and{" "}
-        <a href="https://github.com/Vatsal2010">Vatsal</a>
+        Website by <a href="https://github.com/somsingh23">Som</a> and{" "}
+        <a href="https://www.linkedin.com/in/aditya-sharma-58b9501b8">Aditya</a>
       </p>
     </footer>
   );
