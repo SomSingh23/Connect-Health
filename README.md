@@ -13,7 +13,8 @@ The overarching goal is to ensure that individuals from underserved communities 
  - ![image](https://github.com/SomSingh23/Connect-Health/assets/91485305/d69e3d69-0f66-4b51-bc32-5b99f1fc40fd)
 
 ## CloudFront Invalidations
- - ![image](https://github.com/user-attachments/assets/c962f53d-330f-44f6-8216-e6804981fac0)
+ - ![image](https://github.com/user-attachments/assets/bbdb8aba-1433-48d4-bddb-4762d800cd2d)
+
 
 
 
