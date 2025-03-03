@@ -1,8 +1,15 @@
 ![Connect-Health](https://socialify.git.ci/SomSingh23/Connect-Health/image?description=1&descriptionEditable=Health%20Care%20Access%20for%20Underserved%20Community&font=Bitter&forks=1&language=1&name=1&owner=1&stargazers=1&theme=Dark)
-## [AWS Deployment](https://app.connect-health.xyz/)
-## [Vercel Deployment](https://connectihealth.vercel.app)
 
 <hr>
+
+# Important Notice
+As of March 4th, 2025, I will no longer be able to actively maintain this project. Additionally, the domain connect-health.xyz is expiring soon, and I will be removing all deployments from AWS, Vercel, and Render.
+
+Going forward, the only remaining resource will be the GitHub repository, which will continue to host the code and showcase the work. The live website will no longer be available.
+
+A very warm thank you to everyone who has used the website. Your support and feedback have been greatly appreciated, and I’m grateful for the time you've spent engaging with this project.
+
+Thank you once again, and I hope the code remains useful for anyone looking to explore it!
 
 ## Introduction 😃
 Our project endeavors to tackle the critical issue of linking underserved patients with healthcare professionals. With a primary focus on enhancing accessibility, our aim is to create a seamless connection between underserved communities and doctors, addressing challenges such as geographical constraints and language barriers. By leveraging innovative technologies, particularly WebRTC, our web application facilitates virtual consultations, enabling patients to consult with doctors remotely.
