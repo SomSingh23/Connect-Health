@@ -13,6 +13,13 @@ Thank you once again, and I hope the code remains useful for anyone looking to e
 
 ![image](https://github.com/user-attachments/assets/35a2e96a-2c24-4e80-bf56-ee33a35b4870)
 
+![image](https://github.com/user-attachments/assets/b4ebff9c-7bf9-4306-b628-e15890455b19)
+
+
+![image](https://github.com/user-attachments/assets/539c4ccd-1fc5-494c-ad42-614b9b6588ff)
+
+
+
 
 ## Introduction 😃
 Our project endeavors to tackle the critical issue of linking underserved patients with healthcare professionals. With a primary focus on enhancing accessibility, our aim is to create a seamless connection between underserved communities and doctors, addressing challenges such as geographical constraints and language barriers. By leveraging innovative technologies, particularly WebRTC, our web application facilitates virtual consultations, enabling patients to consult with doctors remotely.
